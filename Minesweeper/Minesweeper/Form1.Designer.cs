@@ -137,7 +137,7 @@
             this.mineflag.BackgroundImage = global::Minesweeper.Properties.Resources.mineflag;
             this.mineflag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.mineflag.Image = global::Minesweeper.Properties.Resources.mineflag;
-            this.mineflag.Location = new System.Drawing.Point(741, 24);
+            this.mineflag.Location = new System.Drawing.Point(752, 17);
             this.mineflag.Name = "mineflag";
             this.mineflag.Size = new System.Drawing.Size(36, 36);
             this.mineflag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

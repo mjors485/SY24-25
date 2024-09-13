@@ -14,34 +14,25 @@ namespace RNGgame
     {
 
         private int score;
-        private bool isGameActive; // Add a flag to track the game state
 
         public Form1()
         {
             InitializeComponent();
             score = 0;
-            isGameActive = false; // Initially, the game is not active
         }
 
         private void activateButton_Click(object sender, EventArgs e)
         {
-            secondLabel.Text = "_";
+            secondLabel.Text = "__";
             Random random = new Random();
             int num = random.Next(1, 11);
             firstLabel.Text = num.ToString();
-            isGameActive = true; // Set the flag to true when the game is activated
             notifyLabel.Text = "Game activated! Now you can make a guess.";
         }
 
         private void higherButton_Click(object sender, EventArgs e)
         {
-            if (!isGameActive) // Check if the game is active
-            {
-                notifyLabel.Text = "Please restart the game before making a guess.";
-                return;
-            }
-
-            if (firstLabel.Text != "_")
+            if (firstLabel.Text != "__")
             {
                 Random random = new Random();
                 int num = random.Next(1, 11);
@@ -54,15 +45,52 @@ namespace RNGgame
                 {
                     score++;
                     notifyLabel.Text = $"You scored a point! {secondNum} is greater than {firstNum}. Try again for more points!";
+                    scoreLabel.Text = score.ToString();
                 }
                 else
                 {
                     notifyLabel.Text = $"You do not get a point... {secondNum} is not greater than {firstNum}. Try again for more points!";
                 }
+
+                activateButton.Text = "GENERATE NEW GUESS";
+                firstLabel.Text = "__";
             }
+
             else
             {
-                notifyLabel.Text = "Please generate the first number before making a guess.";
+                notifyLabel.Text = "Please generate the a new guess first.";
+            }
+        }
+
+        private void lowerButton_Click(object sender, EventArgs e)
+        {
+            if (firstLabel.Text != "__")
+            {
+                Random random = new Random();
+                int num = random.Next(1, 11);
+                secondLabel.Text = num.ToString();
+
+                int firstNum = int.Parse(firstLabel.Text);
+                int secondNum = int.Parse(secondLabel.Text);
+
+                if (secondNum < firstNum)
+                {
+                    score++;
+                    notifyLabel.Text = $"You scored a point! {secondNum} is less than {firstNum}. Try again for more points!";
+                    scoreLabel.Text = score.ToString();
+                }
+                else
+                {
+                    notifyLabel.Text = $"You do not get a point... {secondNum} is not less than {firstNum}. Try again for more points!";
+                }
+
+                activateButton.Text = "GENERATE NEW GUESS";
+                firstLabel.Text = "__";
+            }
+
+            else
+            {
+                notifyLabel.Text = "Please generate the a new guess first.";
             }
         }
     }

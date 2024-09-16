@@ -32,7 +32,7 @@ namespace RNGgame
 
         private void higherButton_Click(object sender, EventArgs e)
         {
-            if (firstLabel.Text != "__")
+            if (firstLabel.Text != "__") 
             {
                 Random random = new Random();
                 int num = random.Next(1, 11);
@@ -47,10 +47,15 @@ namespace RNGgame
                     notifyLabel.Text = $"You scored a point! {secondNum} is greater than {firstNum}. Try again for more points!";
                     scoreLabel.Text = score.ToString();
                 }
-                else
+                if (secondNum < firstNum)
                 {
                     notifyLabel.Text = $"You do not get a point... {secondNum} is not greater than {firstNum}. Try again for more points!";
                 }
+                if (secondNum == firstNum)
+                {
+                    notifyLabel.Text = $"You do not get a point... {secondNum} is equal to {firstNum}. Try again for more points!";
+                }
+
 
                 activateButton.Text = "GENERATE NEW GUESS";
                 firstLabel.Text = "__";
@@ -79,9 +84,13 @@ namespace RNGgame
                     notifyLabel.Text = $"You scored a point! {secondNum} is less than {firstNum}. Try again for more points!";
                     scoreLabel.Text = score.ToString();
                 }
-                else
+                if (secondNum > firstNum)
                 {
                     notifyLabel.Text = $"You do not get a point... {secondNum} is not less than {firstNum}. Try again for more points!";
+                }
+                if (secondNum == firstNum)
+                {
+                    notifyLabel.Text = $"You do not get a point... {secondNum} is equal to {firstNum}. Try again for more points!";
                 }
 
                 activateButton.Text = "GENERATE NEW GUESS";

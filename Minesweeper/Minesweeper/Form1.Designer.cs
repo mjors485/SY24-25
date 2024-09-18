@@ -129,6 +129,7 @@
             this.button98 = new System.Windows.Forms.Button();
             this.button99 = new System.Windows.Forms.Button();
             this.button100 = new System.Windows.Forms.Button();
+            this.resetButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mineflag)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1144,12 +1145,23 @@
             this.button100.UseVisualStyleBackColor = true;
             this.button100.MouseDown += new System.Windows.Forms.MouseEventHandler(this.button81_MouseDown);
             // 
+            // resetButton
+            // 
+            this.resetButton.Location = new System.Drawing.Point(465, 17);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(115, 36);
+            this.resetButton.TabIndex = 122;
+            this.resetButton.Text = "RESET";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.resetButton);
             this.Controls.Add(this.button81);
             this.Controls.Add(this.button82);
             this.Controls.Add(this.button83);
@@ -1360,6 +1372,7 @@
         private System.Windows.Forms.Button button98;
         private System.Windows.Forms.Button button99;
         private System.Windows.Forms.Button button100;
+        private System.Windows.Forms.Button resetButton;
     }
 }
 

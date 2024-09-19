@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mineflag = new System.Windows.Forms.PictureBox();
+            this.flagPictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -130,20 +130,21 @@
             this.button99 = new System.Windows.Forms.Button();
             this.button100 = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.mineflag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flagPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // mineflag
+            // flagPictureBox
             // 
-            this.mineflag.BackgroundImage = global::Minesweeper.Properties.Resources.mineflag;
-            this.mineflag.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mineflag.Image = global::Minesweeper.Properties.Resources.mineflag;
-            this.mineflag.Location = new System.Drawing.Point(752, 17);
-            this.mineflag.Name = "mineflag";
-            this.mineflag.Size = new System.Drawing.Size(36, 36);
-            this.mineflag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.mineflag.TabIndex = 11;
-            this.mineflag.TabStop = false;
+            this.flagPictureBox.BackgroundImage = global::Minesweeper.Properties.Resources.mineflag;
+            this.flagPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.flagPictureBox.Image = global::Minesweeper.Properties.Resources.mineflag;
+            this.flagPictureBox.Location = new System.Drawing.Point(712, 17);
+            this.flagPictureBox.Name = "flagPictureBox";
+            this.flagPictureBox.Size = new System.Drawing.Size(76, 78);
+            this.flagPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.flagPictureBox.TabIndex = 11;
+            this.flagPictureBox.TabStop = false;
+            this.flagPictureBox.Visible = false;
             // 
             // button1
             // 
@@ -1262,16 +1263,16 @@
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.button20);
-            this.Controls.Add(this.mineflag);
+            this.Controls.Add(this.flagPictureBox);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.mineflag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.flagPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox mineflag;
+        private System.Windows.Forms.PictureBox flagPictureBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;

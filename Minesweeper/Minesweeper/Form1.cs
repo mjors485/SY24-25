@@ -39,7 +39,8 @@ namespace Minesweeper
         private void button81_MouseDown(object sender, MouseEventArgs e)
         {
             Button b = sender as Button;
-            b.BackColor = Color.Red;
+            Tile t = tileGrid[getIndex(b)];
+            t.SetFlag(true);
         }
 
         private void resetButton_Click(object sender, EventArgs e)
@@ -53,7 +54,7 @@ namespace Minesweeper
             {
                 btnGrid[i] = (Button)Controls["button" + (i + 1)];
                 tileGrid[i] = new Tile(btnGrid[i]);
-                btnGrid[i].BackColor = Color.Green;
+                tileGrid[i].SetFlagImage(flagPictureBox.Image);
             }
         }
     }

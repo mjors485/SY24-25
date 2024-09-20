@@ -16,7 +16,7 @@ namespace Minesweeper
     {
         Button[] btnGrid = new Button[100];
         Tile[] tileGrid = new Tile[100];
-        
+
         public Form1()
         {
             InitializeComponent();
@@ -55,6 +55,9 @@ namespace Minesweeper
                 btnGrid[i] = (Button)Controls["button" + (i + 1)];
                 tileGrid[i] = new Tile(btnGrid[i]);
                 tileGrid[i].SetFlagImage(flagPictureBox.Image);
+                tileGrid[i].SetMineImage(minePictureBox.Image);
+                tileGrid[i].SetMine(true);
+                //tileGrid[i].SetFlag(false);
             }
         }
     }

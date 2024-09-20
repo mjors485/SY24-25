@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flagPictureBox = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -130,21 +129,11 @@
             this.button99 = new System.Windows.Forms.Button();
             this.button100 = new System.Windows.Forms.Button();
             this.resetButton = new System.Windows.Forms.Button();
+            this.minePictureBox = new System.Windows.Forms.PictureBox();
+            this.flagPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.minePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flagPictureBox)).BeginInit();
             this.SuspendLayout();
-            // 
-            // flagPictureBox
-            // 
-            this.flagPictureBox.BackgroundImage = global::Minesweeper.Properties.Resources.mineflag;
-            this.flagPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flagPictureBox.Image = global::Minesweeper.Properties.Resources.mineflag;
-            this.flagPictureBox.Location = new System.Drawing.Point(712, 17);
-            this.flagPictureBox.Name = "flagPictureBox";
-            this.flagPictureBox.Size = new System.Drawing.Size(76, 78);
-            this.flagPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.flagPictureBox.TabIndex = 11;
-            this.flagPictureBox.TabStop = false;
-            this.flagPictureBox.Visible = false;
             // 
             // button1
             // 
@@ -1156,12 +1145,37 @@
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
+            // minePictureBox
+            // 
+            this.minePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.minePictureBox.Image = global::Minesweeper.Properties.Resources.bomb;
+            this.minePictureBox.Location = new System.Drawing.Point(712, 117);
+            this.minePictureBox.Name = "minePictureBox";
+            this.minePictureBox.Size = new System.Drawing.Size(76, 78);
+            this.minePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.minePictureBox.TabIndex = 123;
+            this.minePictureBox.TabStop = false;
+            this.minePictureBox.Visible = false;
+            // 
+            // flagPictureBox
+            // 
+            this.flagPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.flagPictureBox.Image = global::Minesweeper.Properties.Resources.mineflag;
+            this.flagPictureBox.Location = new System.Drawing.Point(712, 17);
+            this.flagPictureBox.Name = "flagPictureBox";
+            this.flagPictureBox.Size = new System.Drawing.Size(76, 78);
+            this.flagPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.flagPictureBox.TabIndex = 11;
+            this.flagPictureBox.TabStop = false;
+            this.flagPictureBox.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.minePictureBox);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.button81);
             this.Controls.Add(this.button82);
@@ -1266,6 +1280,7 @@
             this.Controls.Add(this.flagPictureBox);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.minePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flagPictureBox)).EndInit();
             this.ResumeLayout(false);
 
@@ -1374,6 +1389,7 @@
         private System.Windows.Forms.Button button99;
         private System.Windows.Forms.Button button100;
         private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.PictureBox minePictureBox;
     }
 }
 

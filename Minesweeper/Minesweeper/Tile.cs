@@ -43,10 +43,13 @@ namespace Minesweeper
         public void SetDug(Boolean b)
         { m_dug = b; }
 
-        public void SetFlag(Boolean b)
+        public void SetFlag()
         {
-            m_flag = b;
-            m_b.BackgroundImage = m_flagImage;
+            m_flag = !m_flag;
+            if (m_flag)
+                m_b.BackgroundImage = m_flagImage;
+            else
+                m_b.BackgroundImage = null;
         }
 
     }

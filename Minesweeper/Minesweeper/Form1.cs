@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
@@ -40,7 +41,7 @@ namespace Minesweeper
         {
             Button b = sender as Button;
             Tile t = tileGrid[getIndex(b)];
-            t.SetFlag(true);
+            t.SetFlag();
         }
 
         private void resetButton_Click(object sender, EventArgs e)
@@ -56,9 +57,15 @@ namespace Minesweeper
                 tileGrid[i] = new Tile(btnGrid[i]);
                 tileGrid[i].SetFlagImage(flagPictureBox.Image);
                 tileGrid[i].SetMineImage(minePictureBox.Image);
-                tileGrid[i].SetMine(true);
-                //tileGrid[i].SetFlag(false);
             }
+        }
+
+        private void CreateMines(int numMines)
+        {
+            //until we have enough mines
+            //generate number from 1-100
+            // set mine on that tile if it doesn't already have a mine
+
         }
     }
 }

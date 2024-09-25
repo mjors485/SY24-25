@@ -35,21 +35,24 @@ namespace Minesweeper
         }
 
         public void SetMine(Boolean b)
-        {
-            m_mine = b;
-            m_b.BackgroundImage = m_mineImage;
-        }
+        { m_mine = b; }
 
-        public void SetDug(Boolean b)
-        { m_dug = b; }
+        public Boolean GetMine() { return m_mine; }
+
+        public void SetDug()
+        { 
+            m_dug = true;
+            if (m_mine)
+                m_b.BackgroundImage = m_mineImage;
+        }
 
         public void SetFlag()
         {
             m_flag = !m_flag;
             if (m_flag)
-                m_b.BackgroundImage = m_flagImage;
+            { m_b.BackgroundImage = m_flagImage; }
             else
-                m_b.BackgroundImage = null;
+            { m_b.BackgroundImage = null; }
         }
 
     }

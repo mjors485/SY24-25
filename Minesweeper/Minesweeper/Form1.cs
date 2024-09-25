@@ -38,6 +38,17 @@ namespace Minesweeper
             return retVal - 1;
         }
 
+        private void setCounts()
+        {
+            // for every tile on the board
+            for (int i = 0; i < 100; i++)
+            {
+                tileGrid[i].SetNearby(1);
+            }
+            // add one for each adjacent mine
+            // set the count into the tile
+        }
+
         private void button81_MouseDown(object sender, MouseEventArgs e)
         {
             Button b = sender as Button;

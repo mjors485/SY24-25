@@ -27,7 +27,8 @@ namespace Minesweeper
 
         private Button getButton(int r, int c)
         {
-            return (Button)getButton(r, c);
+            int idx = (r - 1) * 10 + (c - 1);
+            return btnGrid[idx];
         }
 
         private int getIndex(Button b)
@@ -41,9 +42,12 @@ namespace Minesweeper
         private void setCounts()
         {
             // for every tile on the board
-            for (int i = 0; i < 100; i++)
+            for (int r = 1; r < 11; r++)
             {
-                tileGrid[i].SetNearby(1);
+                for (int c = 1; c < 11; c++)
+                {
+                    getButton(r, c).BackColor = Color.HotPink;
+                }
             }
             // add one for each adjacent mine
             // set the count into the tile
@@ -74,6 +78,7 @@ namespace Minesweeper
                 tileGrid[i].SetMineImage(minePictureBox.Image);
             }
             CreateMines(5);
+            setCounts();
         }
 
         private void CreateMines(int numMines)

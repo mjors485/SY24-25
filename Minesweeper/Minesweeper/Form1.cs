@@ -46,11 +46,24 @@ namespace Minesweeper
             {
                 for (int c = 1; c < 11; c++)
                 {
-                    getButton(r, c).BackColor = Color.HotPink;
+                    getButton(r, c).BackColor = Color.Honeydew;
                 }
             }
             // add one for each adjacent mine
             // set the count into the tile
+        }
+
+        private int countAdjacent(int r, int c)
+        {
+            if (r > 1 && c > 1) getButton(r - 1, c - 1).BackColor = Color.HotPink;
+            if (r > 1) getButton(r - 1, c).BackColor = Color.HotPink;
+            if (r > 1 && c < 10) getButton(r - 1, c + 1).BackColor = Color.HotPink;
+            if (c > 1) getButton(r, c - 1).BackColor = Color.HotPink;
+            if (c < 10) getButton(r, c + 1).BackColor = Color.HotPink;
+            if (r < 10 && c > 1) getButton(r + 1, c - 1).BackColor = Color.HotPink;
+            if (r < 10) getButton(r + 1,c).BackColor = Color.HotPink;
+            if (r < 10 && c < 10) getButton(r + 1, c + 1).BackColor = Color.HotPink;
+            return 0;
         }
 
         private void button81_MouseDown(object sender, MouseEventArgs e)
@@ -78,7 +91,9 @@ namespace Minesweeper
                 tileGrid[i].SetMineImage(minePictureBox.Image);
             }
             CreateMines(5);
-            setCounts();
+            //setCounts();
+            countAdjacent(1, 1);
+            countAdjacent(10, 10);
         }
 
         private void CreateMines(int numMines)

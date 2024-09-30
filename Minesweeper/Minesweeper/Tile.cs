@@ -20,7 +20,10 @@ namespace Minesweeper
         private Image m_mineImage;
 
         public void SetNearby(int n)
-        { m_nearby = n; }
+        {
+            m_nearby = n;
+            m_b.Text = m_nearby.ToString();
+        }
 
         public void SetFlagImage(Image flagImage)
         { m_flagImage = flagImage; }

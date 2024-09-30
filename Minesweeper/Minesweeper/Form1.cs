@@ -55,15 +55,40 @@ namespace Minesweeper
 
         private int countAdjacent(int r, int c)
         {
-            if (r > 1 && c > 1) getButton(r - 1, c - 1).BackColor = Color.HotPink;
-            if (r > 1) getButton(r - 1, c).BackColor = Color.HotPink;
-            if (r > 1 && c < 10) getButton(r - 1, c + 1).BackColor = Color.HotPink;
-            if (c > 1) getButton(r, c - 1).BackColor = Color.HotPink;
-            if (c < 10) getButton(r, c + 1).BackColor = Color.HotPink;
-            if (r < 10 && c > 1) getButton(r + 1, c - 1).BackColor = Color.HotPink;
-            if (r < 10) getButton(r + 1,c).BackColor = Color.HotPink;
-            if (r < 10 && c < 10) getButton(r + 1, c + 1).BackColor = Color.HotPink;
-            return 0;
+            int count = 0;
+            if (r > 1 && c > 1)
+            {
+                if (tileGrid[getIndex(getButton(r - 1, c - 1))].GetMine()) count ++;
+            }
+            if (r > 1)
+            {
+                if (tileGrid[getIndex(getButton(r - 1, c))].GetMine()) count++;
+            }
+            if (r > 1 && c < 10)
+            {
+                if (tileGrid[getIndex(getButton(r - 1, c + 1))].GetMine()) count++;
+            }
+            if (c > 1)
+            {
+                if (tileGrid[getIndex(getButton(r, c - 1))].GetMine()) count++;
+            }
+            if (c < 10)
+            {
+                if (tileGrid[getIndex(getButton(r, c + 1))].GetMine()) count++;
+            }
+            if (r < 10 && c > 1)
+            {
+                if (tileGrid[getIndex(getButton(r + 1, c - 1))].GetMine()) count++;
+            }
+            if (r < 10)
+            {
+                if (tileGrid[getIndex(getButton(r + 1, c))].GetMine()) count++;
+            }
+            if (r < 10 && c < 10)
+            {
+                if (tileGrid[getIndex(getButton(r + 1, c + 1))].GetMine()) count++;
+            }
+            return count;
         }
 
         private void button81_MouseDown(object sender, MouseEventArgs e)
@@ -91,9 +116,14 @@ namespace Minesweeper
                 tileGrid[i].SetMineImage(minePictureBox.Image);
             }
             CreateMines(5);
-            //setCounts();
-            countAdjacent(1, 1);
-            countAdjacent(10, 10);
+            //countAdjacent(4, 5);
+            for(int r = 1; r < 11; r++)
+            {
+                for(int c = 1; c < 11; c++)
+                {
+                    tileGrid[getIndex(getButton(r, c))].SetNearby(countAdjacent(r, c));
+                }
+            }
         }
 
         private void CreateMines(int numMines)

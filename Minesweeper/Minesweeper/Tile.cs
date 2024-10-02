@@ -15,9 +15,12 @@ namespace Minesweeper
         private Boolean m_flag;
         private Boolean m_dug;
         private Boolean m_mine;
+        private Boolean m_adjacent;
         private int m_nearby;
         private Image m_flagImage;
         private Image m_mineImage;
+
+        public int GetNearby() { return m_nearby; }
 
         public void SetNearby(int n)
         {
@@ -38,13 +41,19 @@ namespace Minesweeper
         }
 
         public void SetMine(Boolean b)
-        { m_mine = b; }
+        {
+            m_mine = b;
+            m_b.BackgroundImage = m_mineImage;
+        }
 
         public Boolean GetMine() { return m_mine; }
+
+        public Boolean GetFlag() { return m_flag; }
 
         public void SetDug()
         { 
             m_dug = true;
+            m_b.BackColor = Color.LightYellow;
             if (m_mine)
                 m_b.BackgroundImage = m_mineImage;
         }
@@ -53,7 +62,9 @@ namespace Minesweeper
         {
             m_flag = !m_flag;
             if (m_flag)
-            { m_b.BackgroundImage = m_flagImage; }
+            {
+                m_b.BackgroundImage = m_flagImage;
+            }
             else
             { m_b.BackgroundImage = null; }
         }

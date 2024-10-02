@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Minesweeper
 {
@@ -91,14 +92,39 @@ namespace Minesweeper
             return count;
         }
 
+        private int CountFlags(int r, int c)
+        {
+            int count = 0;
+
+            // Check all adjacent tiles around (r, c)
+            if (r > 1 && c > 1 && tileGrid[getIndex(getButton(r - 1, c - 1))].GetFlag()) count++;
+            if (r > 1 && tileGrid[getIndex(getButton(r - 1, c))].GetFlag()) count++;
+            if (r > 1 && c < 10 && tileGrid[getIndex(getButton(r - 1, c + 1))].GetFlag()) count++;
+            if (c > 1 && tileGrid[getIndex(getButton(r, c - 1))].GetFlag()) count++;
+            if (c < 10 && tileGrid[getIndex(getButton(r, c + 1))].GetFlag()) count++;
+            if (r < 10 && c > 1 && tileGrid[getIndex(getButton(r + 1, c - 1))].GetFlag()) count++;
+            if (r < 10 && tileGrid[getIndex(getButton(r + 1, c))].GetFlag()) count++;
+            if (r < 10 && c < 10 && tileGrid[getIndex(getButton(r + 1, c + 1))].GetFlag()) count++;
+
+            return count;
+        }
+
         private void button81_MouseDown(object sender, MouseEventArgs e)
         {
             Button b = sender as Button;
+            int index = getIndex(b);
+            int row = (index / 10) + 1; // Converts index to corresponding row (1 to 10)
+            int col = (index % 10) + 1; // Converts index to corresponding column (1 to 10)
             Tile t = tileGrid[getIndex(b)];
+            
             if (e.Button == MouseButtons.Right)
                 t.SetFlag();
-            else
+            else if (e.Button == MouseButtons.Left)
                 t.SetDug();
+            else if (e.Button == MouseButtons.Middle)
+                digAdjacent(row, col);
+
+
         }
 
         private void resetButton_Click(object sender, EventArgs e)
@@ -114,6 +140,8 @@ namespace Minesweeper
                 tileGrid[i] = new Tile(btnGrid[i]);
                 tileGrid[i].SetFlagImage(flagPictureBox.Image);
                 tileGrid[i].SetMineImage(minePictureBox.Image);
+                btnGrid[i].BackgroundImage = null;
+                btnGrid[i].Text = null;
             }
             CreateMines(5);
             //countAdjacent(4, 5);
@@ -123,6 +151,53 @@ namespace Minesweeper
                 {
                     tileGrid[getIndex(getButton(r, c))].SetNearby(countAdjacent(r, c));
                 }
+            }
+        }
+
+        private void digAdjacent(int r, int c)
+        {
+            int flagCount = CountFlags(r, c);
+            int actualMineCount = countAdjacent(r, c);
+
+            // If the number of flags is equal to the number of actual mines
+            if (flagCount == actualMineCount)
+            {
+                // Dig adjacent tiles (without digging flagged tiles)
+                if (r > 1 && c > 1 && !tileGrid[getIndex(getButton(r - 1, c - 1))].GetFlag())
+                    tileGrid[getIndex(getButton(r - 1, c - 1))].SetDug();
+
+                if (r > 1 && !tileGrid[getIndex(getButton(r - 1, c))].GetFlag())
+                    tileGrid[getIndex(getButton(r - 1, c))].SetDug();
+
+                if (r > 1 && c < 10 && !tileGrid[getIndex(getButton(r - 1, c + 1))].GetFlag())
+                    tileGrid[getIndex(getButton(r - 1, c + 1))].SetDug();
+
+                if (c > 1 && !tileGrid[getIndex(getButton(r, c - 1))].GetFlag())
+                    tileGrid[getIndex(getButton(r, c - 1))].SetDug();
+
+                if (c < 10 && !tileGrid[getIndex(getButton(r, c + 1))].GetFlag())
+                    tileGrid[getIndex(getButton(r, c + 1))].SetDug();
+
+                if (r < 10 && c > 1 && !tileGrid[getIndex(getButton(r + 1, c - 1))].GetFlag())
+                    tileGrid[getIndex(getButton(r + 1, c - 1))].SetDug();
+
+                if (r < 10 && !tileGrid[getIndex(getButton(r + 1, c))].GetFlag())
+                    tileGrid[getIndex(getButton(r + 1, c))].SetDug();
+
+                if (r < 10 && c < 10 && !tileGrid[getIndex(getButton(r + 1, c + 1))].GetFlag())
+                    tileGrid[getIndex(getButton(r + 1, c + 1))].SetDug();
+            }
+            else
+            {
+                // If flags are incorrect, dig all adjacent tiles including mines
+                if (r > 1 && c > 1) tileGrid[getIndex(getButton(r - 1, c - 1))].SetDug();
+                if (r > 1) tileGrid[getIndex(getButton(r - 1, c))].SetDug();
+                if (r > 1 && c < 10) tileGrid[getIndex(getButton(r - 1, c + 1))].SetDug();
+                if (c > 1) tileGrid[getIndex(getButton(r, c - 1))].SetDug();
+                if (c < 10) tileGrid[getIndex(getButton(r, c + 1))].SetDug();
+                if (r < 10 && c > 1) tileGrid[getIndex(getButton(r + 1, c - 1))].SetDug();
+                if (r < 10) tileGrid[getIndex(getButton(r + 1, c))].SetDug();
+                if (r < 10 && c < 10) tileGrid[getIndex(getButton(r + 1, c + 1))].SetDug();
             }
         }
 

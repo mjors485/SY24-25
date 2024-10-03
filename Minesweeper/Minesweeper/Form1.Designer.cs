@@ -131,6 +131,7 @@
             this.resetButton = new System.Windows.Forms.Button();
             this.minePictureBox = new System.Windows.Forms.PictureBox();
             this.flagPictureBox = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.minePictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.flagPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -1169,12 +1170,24 @@
             this.flagPictureBox.TabStop = false;
             this.flagPictureBox.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(480, 239);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(272, 46);
+            this.label1.TabIndex = 124;
+            this.label1.Text = "GAME OVER";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.minePictureBox);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.button81);
@@ -1283,6 +1296,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.minePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.flagPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -1390,6 +1404,7 @@
         private System.Windows.Forms.Button button100;
         private System.Windows.Forms.Button resetButton;
         private System.Windows.Forms.PictureBox minePictureBox;
+        private System.Windows.Forms.Label label1;
     }
 }
 

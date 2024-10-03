@@ -120,7 +120,11 @@ namespace Minesweeper
             if (e.Button == MouseButtons.Right)
                 t.SetFlag();
             else if (e.Button == MouseButtons.Left)
+            {
                 t.SetDug();
+                if (tileGrid[getIndex(getButton(row, col))].GetMine() && tileGrid[getIndex(getButton(row, col))].GetDug())
+                    label1.Visible = true;
+            }
             else if (e.Button == MouseButtons.Middle)
                 digAdjacent(row, col);
 
@@ -152,6 +156,7 @@ namespace Minesweeper
                     tileGrid[getIndex(getButton(r, c))].SetNearby(countAdjacent(r, c));
                 }
             }
+            label1.Visible = false;
         }
 
         private void digAdjacent(int r, int c)
@@ -190,14 +195,22 @@ namespace Minesweeper
             else
             {
                 // If flags are incorrect, dig all adjacent tiles including mines
-                if (r > 1 && c > 1) tileGrid[getIndex(getButton(r - 1, c - 1))].SetDug();
-                if (r > 1) tileGrid[getIndex(getButton(r - 1, c))].SetDug();
-                if (r > 1 && c < 10) tileGrid[getIndex(getButton(r - 1, c + 1))].SetDug();
-                if (c > 1) tileGrid[getIndex(getButton(r, c - 1))].SetDug();
-                if (c < 10) tileGrid[getIndex(getButton(r, c + 1))].SetDug();
-                if (r < 10 && c > 1) tileGrid[getIndex(getButton(r + 1, c - 1))].SetDug();
-                if (r < 10) tileGrid[getIndex(getButton(r + 1, c))].SetDug();
-                if (r < 10 && c < 10) tileGrid[getIndex(getButton(r + 1, c + 1))].SetDug();
+                if (r > 1 && c > 1)
+                    tileGrid[getIndex(getButton(r - 1, c - 1))].SetDug();
+                if (r > 1)
+                    tileGrid[getIndex(getButton(r - 1, c))].SetDug();
+                if (r > 1 && c < 10)
+                    tileGrid[getIndex(getButton(r - 1, c + 1))].SetDug();
+                if (c > 1)
+                    tileGrid[getIndex(getButton(r, c - 1))].SetDug();
+                if (c < 10)
+                    tileGrid[getIndex(getButton(r, c + 1))].SetDug();
+                if (r < 10 && c > 1)
+                    tileGrid[getIndex(getButton(r + 1, c - 1))].SetDug();
+                if (r < 10)
+                    tileGrid[getIndex(getButton(r + 1, c))].SetDug();
+                if (r < 10 && c < 10)
+                    tileGrid[getIndex(getButton(r + 1, c + 1))].SetDug();
             }
         }
 

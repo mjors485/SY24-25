@@ -42,7 +42,6 @@ namespace Minesweeper
 
         private void setCounts()
         {
-            // for every tile on the board
             for (int r = 1; r < 11; r++)
             {
                 for (int c = 1; c < 11; c++)
@@ -50,8 +49,6 @@ namespace Minesweeper
                     getButton(r, c).BackColor = Color.Honeydew;
                 }
             }
-            // add one for each adjacent mine
-            // set the count into the tile
         }
 
         private int countAdjacent(int r, int c)
@@ -96,7 +93,6 @@ namespace Minesweeper
         {
             int count = 0;
 
-            // Check all adjacent tiles around (r, c)
             if (r > 1 && c > 1 && tileGrid[getIndex(getButton(r - 1, c - 1))].GetFlag()) count++;
             if (r > 1 && tileGrid[getIndex(getButton(r - 1, c))].GetFlag()) count++;
             if (r > 1 && c < 10 && tileGrid[getIndex(getButton(r - 1, c + 1))].GetFlag()) count++;
@@ -113,19 +109,19 @@ namespace Minesweeper
         {
             Button b = sender as Button;
             int index = getIndex(b);
-            int row = (index / 10) + 1; // Converts index to corresponding row (1 to 10)
-            int col = (index % 10) + 1; // Converts index to corresponding column (1 to 10)
+            int row = (index / 10) + 1;
+            int col = (index % 10) + 1;
             Tile t = tileGrid[getIndex(b)];
             
-            if (e.Button == MouseButtons.Right)
+            if (e.Button == MouseButtons.Right && label1.Visible == false)
                 t.SetFlag();
-            else if (e.Button == MouseButtons.Left)
+            else if (e.Button == MouseButtons.Left && label1.Visible == false)
             {
                 t.SetDug();
                 if (tileGrid[getIndex(getButton(row, col))].GetMine() && tileGrid[getIndex(getButton(row, col))].GetDug())
                     label1.Visible = true;
             }
-            else if (e.Button == MouseButtons.Middle)
+            else if (e.Button == MouseButtons.Middle && label1.Visible == false)
                 digAdjacent(row, col);
 
 
@@ -148,7 +144,6 @@ namespace Minesweeper
                 btnGrid[i].Text = null;
             }
             CreateMines(5);
-            //countAdjacent(4, 5);
             for(int r = 1; r < 11; r++)
             {
                 for(int c = 1; c < 11; c++)
@@ -164,10 +159,8 @@ namespace Minesweeper
             int flagCount = CountFlags(r, c);
             int actualMineCount = countAdjacent(r, c);
 
-            // If the number of flags is equal to the number of actual mines
             if (flagCount == actualMineCount)
             {
-                // Dig adjacent tiles (without digging flagged tiles)
                 if (r > 1 && c > 1 && !tileGrid[getIndex(getButton(r - 1, c - 1))].GetFlag())
                     tileGrid[getIndex(getButton(r - 1, c - 1))].SetDug();
 
@@ -194,36 +187,56 @@ namespace Minesweeper
             }
             else
             {
-                // If flags are incorrect, dig all adjacent tiles including mines
                 if (r > 1 && c > 1)
+                {
                     tileGrid[getIndex(getButton(r - 1, c - 1))].SetDug();
+                    label1.Visible = true;
+                }
                 if (r > 1)
+                {
                     tileGrid[getIndex(getButton(r - 1, c))].SetDug();
+                    label1.Visible = true;
+                }
                 if (r > 1 && c < 10)
+                {
                     tileGrid[getIndex(getButton(r - 1, c + 1))].SetDug();
+                    label1.Visible = true;
+                }
                 if (c > 1)
+                {
                     tileGrid[getIndex(getButton(r, c - 1))].SetDug();
+                    label1.Visible = true;
+                }
                 if (c < 10)
+                {
                     tileGrid[getIndex(getButton(r, c + 1))].SetDug();
+                    label1.Visible = true;
+                }
                 if (r < 10 && c > 1)
+                {
                     tileGrid[getIndex(getButton(r + 1, c - 1))].SetDug();
+                    label1.Visible = true;
+                }
                 if (r < 10)
+                {
                     tileGrid[getIndex(getButton(r + 1, c))].SetDug();
+                    label1.Visible = true;
+                }
                 if (r < 10 && c < 10)
+                {
                     tileGrid[getIndex(getButton(r + 1, c + 1))].SetDug();
+                    label1.Visible = true;
+                }
             }
         }
 
         private void CreateMines(int numMines)
         {
             int mineCount = 0;
-            // until we have enough mines
             while (mineCount < numMines)
             {
-                // generate number from 1-100
                 int rNum = random.Next(0, 100);
 
-                // set mine on that tile if it doesn't already have a mine
                 if (tileGrid[rNum].GetMine() == false)
                 {
                     mineCount++;

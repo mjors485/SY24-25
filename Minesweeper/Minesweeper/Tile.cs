@@ -44,7 +44,6 @@ namespace Minesweeper
         public void SetMine(Boolean b)
         {
             m_mine = b;
-            //m_b.BackgroundImage = m_mineImage;
         }
 
         public Boolean GetMine() { return m_mine; }

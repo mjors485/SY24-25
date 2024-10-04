@@ -1173,13 +1173,14 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.label1.BackColor = System.Drawing.Color.LightCoral;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(480, 239);
+            this.label1.Location = new System.Drawing.Point(479, 297);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(272, 46);
             this.label1.TabIndex = 124;
             this.label1.Text = "GAME OVER";
+            this.label1.Visible = false;
             // 
             // Form1
             // 

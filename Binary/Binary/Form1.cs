@@ -43,7 +43,7 @@ namespace Binary
             TotalLabel.Text = total.ToString();
         }
 
-        private void Calc2()
+        private void CalcB()
         {
             if (bitsB[0] != 0)
                 total += 1;
@@ -62,6 +62,27 @@ namespace Binary
             if (bitsB[7] != 0)
                 total += 128;
             TotalLabel2.Text = total.ToString();
+        }
+
+        private void CalcC()
+        {
+            if (bitsC[0] != 0)
+                total += 1;
+            if (bitsC[1] != 0)
+                total += 2;
+            if (bitsC[2] != 0)
+                total += 4;
+            if (bitsC[3] != 0)
+                total += 8;
+            if (bitsC[4] != 0)
+                total += 16;
+            if (bitsC[5] != 0)
+                total += 32;
+            if (bitsC[6] != 0)
+                total += 64;
+            if (bitsC[7] != 0)
+                total += 128;
+            TotalLabel3.Text = total.ToString();
         }
 
         private void Bit7_TextChanged(object sender, EventArgs e)
@@ -155,7 +176,7 @@ namespace Binary
             else
                 bitsB[7] = 0;
 
-            Calc2();
+            CalcB();
         }
 
         private void Bit1_MouseDown(object sender, MouseEventArgs e)
@@ -168,6 +189,8 @@ namespace Binary
             {
                 ((TextBox)sender).Text = "1";
             }
+
+
         }
 
         private void BitB1_MouseDown(object sender, MouseEventArgs e)
@@ -187,8 +210,8 @@ namespace Binary
             for (int i = 0; i < bits.Length; i++)
             {
                 bits[i] = 0;
+                update();
             }
-            update();
         }
 
         private void update()
@@ -210,6 +233,24 @@ namespace Binary
             BitB6.Text = (bitsB[5] == 1 ? "1" : "0");
             BitB7.Text = (bitsB[6] == 1 ? "1" : "0");
             BitB8.Text = (bitsB[7] == 1 ? "1" : "0");
+
+            BitC1.Text = (bitsC[0] == 1 ? "1" : "0");
+            BitC2.Text = (bitsC[1] == 1 ? "1" : "0");
+            BitC3.Text = (bitsC[2] == 1 ? "1" : "0");
+            BitC4.Text = (bitsC[3] == 1 ? "1" : "0");
+            BitC5.Text = (bitsC[4] == 1 ? "1" : "0");
+            BitC6.Text = (bitsC[5] == 1 ? "1" : "0");
+            BitC7.Text = (bitsC[6] == 1 ? "1" : "0");
+            BitC8.Text = (bitsC[7] == 1 ? "1" : "0");
+        }
+
+        private void ClearButtonB_Click_1(object sender, EventArgs e)
+        {
+            for (int i = 0; i < bits.Length; i++)
+            {
+                bitsB[i] = 0;
+                update();
+            }
         }
     }
 }

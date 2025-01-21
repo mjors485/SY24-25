@@ -59,6 +59,7 @@
             this.ClearButtonB = new System.Windows.Forms.Button();
             this.ShiftButtonA = new System.Windows.Forms.Button();
             this.ShiftButtonB = new System.Windows.Forms.Button();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Bit5
@@ -427,11 +428,22 @@
             this.ShiftButtonB.Text = "SHIFT";
             this.ShiftButtonB.UseVisualStyleBackColor = true;
             // 
+            // ResetButton
+            // 
+            this.ResetButton.Location = new System.Drawing.Point(12, 305);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(75, 75);
+            this.ResetButton.TabIndex = 33;
+            this.ResetButton.Text = "RESET";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 450);
+            this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.ShiftButtonB);
             this.Controls.Add(this.ShiftButtonA);
             this.Controls.Add(this.ClearButtonB);
@@ -503,6 +515,7 @@
         private System.Windows.Forms.Button ClearButtonB;
         private System.Windows.Forms.Button ShiftButtonA;
         private System.Windows.Forms.Button ShiftButtonB;
+        private System.Windows.Forms.Button ResetButton;
     }
 }
 

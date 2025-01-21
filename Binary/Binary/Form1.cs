@@ -24,64 +24,37 @@ namespace Binary
 
         private void Calc()
         {
-            if (bits[0] != 0)
-                total += 1;
-            if (bits[1] != 0)
-                total += 2;
-            if (bits[2] != 0)
-                total += 4;
-            if (bits[3] != 0)
-                total += 8;
-            if (bits[4] != 0)
-                total += 16;
-            if (bits[5] != 0)
-                total += 32;
-            if (bits[6] != 0)
-                total += 64;
-            if (bits[7] != 0)
-                total += 128;
+            for(int i = 0; i < bits.Length; i++)
+            {
+                if(bits[i] != 0)
+                {
+                    total += (int) Math.Pow(2, i);
+                }
+            }
             TotalLabel.Text = total.ToString();
         }
 
         private void CalcB()
         {
-            if (bitsB[0] != 0)
-                total += 1;
-            if (bitsB[1] != 0)
-                total += 2;
-            if (bitsB[2] != 0)
-                total += 4;
-            if (bitsB[3] != 0)
-                total += 8;
-            if (bitsB[4] != 0)
-                total += 16;
-            if (bitsB[5] != 0)
-                total += 32;
-            if (bitsB[6] != 0)
-                total += 64;
-            if (bitsB[7] != 0)
-                total += 128;
+            for (int i = 0; i < bits.Length; i++)
+            {
+                if (bitsB[i] != 0)
+                {
+                    total += (int)Math.Pow(2, i);
+                }
+            }
             TotalLabel2.Text = total.ToString();
         }
 
         private void CalcC()
         {
-            if (bitsC[0] != 0)
-                total += 1;
-            if (bitsC[1] != 0)
-                total += 2;
-            if (bitsC[2] != 0)
-                total += 4;
-            if (bitsC[3] != 0)
-                total += 8;
-            if (bitsC[4] != 0)
-                total += 16;
-            if (bitsC[5] != 0)
-                total += 32;
-            if (bitsC[6] != 0)
-                total += 64;
-            if (bitsC[7] != 0)
-                total += 128;
+            for (int i = 0; i < bits.Length; i++)
+            {
+                if (bitsC[i] != 0)
+                {
+                    total += (int)Math.Pow(2, i);
+                }
+            }
             TotalLabel3.Text = total.ToString();
         }
 
@@ -249,6 +222,25 @@ namespace Binary
             for (int i = 0; i < bits.Length; i++)
             {
                 bitsB[i] = 0;
+                update();
+            }
+        }
+
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < bits.Length; i++)
+            {
+                bits[i] = 0;
+                update();
+            }
+            for (int i = 0; i < bits.Length; i++)
+            {
+                bitsB[i] = 0;
+                update();
+            }
+            for (int i = 0; i < bits.Length; i++)
+            {
+                bitsC[i] = 0;
                 update();
             }
         }

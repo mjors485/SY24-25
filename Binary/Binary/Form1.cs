@@ -244,5 +244,27 @@ namespace Binary
                 update();
             }
         }
+
+        private void ShiftLA_Click(object sender, EventArgs e)
+        {
+            // Shift left
+            for (int i = bits.Length - 1; i > 0; i--)
+            {
+                bits[i] = bits[i - 1]; // Move each bit to the left
+            }
+            bits[0] = 0; // Set the least significant bit to 0
+            update(); // Update the display
+        }
+
+        private void ShiftRA_Click(object sender, EventArgs e)
+        {
+            // Shift right
+            for (int i = 0; i < bits.Length - 1; i++)
+            {
+                bits[i] = bits[i + 1]; // Move each bit to the right
+            }
+            bits[bits.Length - 1] = 0; // Set the most significant bit to 0
+            update(); // Update the display
+        }
     }
 }

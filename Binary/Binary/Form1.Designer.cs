@@ -57,9 +57,11 @@
             this.TotalLabel3 = new System.Windows.Forms.Label();
             this.ClearButtonA = new System.Windows.Forms.Button();
             this.ClearButtonB = new System.Windows.Forms.Button();
-            this.ShiftButtonA = new System.Windows.Forms.Button();
-            this.ShiftButtonB = new System.Windows.Forms.Button();
+            this.ShiftLA = new System.Windows.Forms.Button();
+            this.ShiftLB = new System.Windows.Forms.Button();
             this.ResetButton = new System.Windows.Forms.Button();
+            this.ShiftRA = new System.Windows.Forms.Button();
+            this.ShiftRB = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Bit5
@@ -408,25 +410,26 @@
             this.ClearButtonB.UseVisualStyleBackColor = true;
             this.ClearButtonB.Click += new System.EventHandler(this.ClearButtonB_Click_1);
             // 
-            // ShiftButtonA
+            // ShiftLA
             // 
-            this.ShiftButtonA.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShiftButtonA.Location = new System.Drawing.Point(12, 101);
-            this.ShiftButtonA.Name = "ShiftButtonA";
-            this.ShiftButtonA.Size = new System.Drawing.Size(75, 35);
-            this.ShiftButtonA.TabIndex = 31;
-            this.ShiftButtonA.Text = "SHIFT";
-            this.ShiftButtonA.UseVisualStyleBackColor = true;
+            this.ShiftLA.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShiftLA.Location = new System.Drawing.Point(12, 101);
+            this.ShiftLA.Name = "ShiftLA";
+            this.ShiftLA.Size = new System.Drawing.Size(34, 35);
+            this.ShiftLA.TabIndex = 31;
+            this.ShiftLA.Text = "L";
+            this.ShiftLA.UseVisualStyleBackColor = true;
+            this.ShiftLA.Click += new System.EventHandler(this.ShiftLA_Click);
             // 
-            // ShiftButtonB
+            // ShiftLB
             // 
-            this.ShiftButtonB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShiftButtonB.Location = new System.Drawing.Point(12, 199);
-            this.ShiftButtonB.Name = "ShiftButtonB";
-            this.ShiftButtonB.Size = new System.Drawing.Size(75, 35);
-            this.ShiftButtonB.TabIndex = 32;
-            this.ShiftButtonB.Text = "SHIFT";
-            this.ShiftButtonB.UseVisualStyleBackColor = true;
+            this.ShiftLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShiftLB.Location = new System.Drawing.Point(12, 199);
+            this.ShiftLB.Name = "ShiftLB";
+            this.ShiftLB.Size = new System.Drawing.Size(34, 35);
+            this.ShiftLB.TabIndex = 32;
+            this.ShiftLB.Text = "L";
+            this.ShiftLB.UseVisualStyleBackColor = true;
             // 
             // ResetButton
             // 
@@ -438,14 +441,37 @@
             this.ResetButton.UseVisualStyleBackColor = true;
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
+            // ShiftRA
+            // 
+            this.ShiftRA.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShiftRA.Location = new System.Drawing.Point(52, 101);
+            this.ShiftRA.Name = "ShiftRA";
+            this.ShiftRA.Size = new System.Drawing.Size(34, 35);
+            this.ShiftRA.TabIndex = 34;
+            this.ShiftRA.Text = "R";
+            this.ShiftRA.UseVisualStyleBackColor = true;
+            this.ShiftRA.Click += new System.EventHandler(this.ShiftRA_Click);
+            // 
+            // ShiftRB
+            // 
+            this.ShiftRB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ShiftRB.Location = new System.Drawing.Point(52, 199);
+            this.ShiftRB.Name = "ShiftRB";
+            this.ShiftRB.Size = new System.Drawing.Size(34, 35);
+            this.ShiftRB.TabIndex = 35;
+            this.ShiftRB.Text = "R";
+            this.ShiftRB.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 450);
+            this.Controls.Add(this.ShiftRB);
+            this.Controls.Add(this.ShiftRA);
             this.Controls.Add(this.ResetButton);
-            this.Controls.Add(this.ShiftButtonB);
-            this.Controls.Add(this.ShiftButtonA);
+            this.Controls.Add(this.ShiftLB);
+            this.Controls.Add(this.ShiftLA);
             this.Controls.Add(this.ClearButtonB);
             this.Controls.Add(this.ClearButtonA);
             this.Controls.Add(this.TotalLabel3);
@@ -513,9 +539,11 @@
         private System.Windows.Forms.Label TotalLabel3;
         private System.Windows.Forms.Button ClearButtonA;
         private System.Windows.Forms.Button ClearButtonB;
-        private System.Windows.Forms.Button ShiftButtonA;
-        private System.Windows.Forms.Button ShiftButtonB;
+        private System.Windows.Forms.Button ShiftLA;
+        private System.Windows.Forms.Button ShiftLB;
         private System.Windows.Forms.Button ResetButton;
+        private System.Windows.Forms.Button ShiftRA;
+        private System.Windows.Forms.Button ShiftRB;
     }
 }
 

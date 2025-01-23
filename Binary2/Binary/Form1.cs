@@ -30,7 +30,7 @@ namespace Binary
 
         private void Calc()
         {
-            //clear the total
+            //Bits1
             bits[0] = 0;
             bits[1] = 0;
             bits[2] = 0;
@@ -39,6 +39,7 @@ namespace Binary
             bits[5] = 0;
             bits[6] = 0;
             bits[7] = 0;
+            
             if (textBox1.Text == "1") { bits[0] = 1; }
             if (textBox2.Text == "1") { bits[1] = 1; }
             if (textBox3.Text == "1") { bits[2] = 1; }
@@ -47,14 +48,18 @@ namespace Binary
             if (textBox6.Text == "1") { bits[5] = 1; }
             if (textBox7.Text == "1") { bits[6] = 1; }
             if (textBox8.Text == "1") { bits[7] = 1; }
+            
             int sum = 0;
+
             for (int i = 0; i < bits.Length; i++)
             {
                 if (bits[i] != 0) 
                 { sum += (int)Math.Pow(2,7-i); }
             }
+
             label1.Text = sum.ToString();
            
+            //Bits2
             bits2[0] = 0;
             bits2[1] = 0;
             bits2[2] = 0;
@@ -63,6 +68,7 @@ namespace Binary
             bits2[5] = 0;
             bits2[6] = 0;
             bits2[7] = 0;
+            
             if (textBox9.Text == "1") { bits2[0] = 1; }
             if (textBox10.Text == "1") { bits2[1] = 1; }
             if (textBox11.Text == "1") { bits2[2] = 1; }
@@ -71,7 +77,9 @@ namespace Binary
             if (textBox14.Text == "1") { bits2[5] = 1; }
             if (textBox15.Text == "1") { bits2[6] = 1; }
             if (textBox16.Text == "1") { bits2[7] = 1; }
+            
             int sum2 = 0;
+            
             for (int i = 0; i < bits2.Length; i++)
             {
                 if (bits2[i] != 0)
@@ -79,6 +87,7 @@ namespace Binary
             }
             label2.Text = sum2.ToString();
 
+            //Bits3
             bits3[0] = 0;
             bits3[1] = 0;
             bits3[2] = 0;
@@ -87,6 +96,7 @@ namespace Binary
             bits3[5] = 0;
             bits3[6] = 0;
             bits3[7] = 0;
+            
             if (textBox17.Text == "1") { bits3[0] = 1; }
             if (textBox18.Text == "1") { bits3[1] = 1; }
             if (textBox19.Text == "1") { bits3[2] = 1; }
@@ -95,12 +105,15 @@ namespace Binary
             if (textBox22.Text == "1") { bits3[5] = 1; }
             if (textBox23.Text == "1") { bits3[6] = 1; }
             if (textBox24.Text == "1") { bits3[7] = 1; }
+            
             int sum3 = 0;
+            
             for (int i = 0; i < bits3.Length; i++)
             {
                 if (bits3[i] != 0)
                 { sum3 += (int)Math.Pow(2, 7 - i); }
             }
+            
             label3.Text = sum3.ToString();
         }
 
@@ -130,7 +143,8 @@ namespace Binary
             }
         }
         private void button3_Click(object sender, EventArgs e)
-        {for (int i = 0; i < bits3.Length; i++)
+        {
+            for (int i = 0; i < bits3.Length; i++)
             {
                 bits3[i] = 0;
                 update();
@@ -267,18 +281,23 @@ namespace Binary
 
         private void Addbutton_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < bits.Length; i++)
+            for (int i = 0; i < bits3.Length; i++)
             {
-                if (bits[i] == 1 && bits2[i] == 1)
+                bits3[i] = 0;
+                update();
+            }
+
+            int total = 0;
+            for (int i = 7; i > -1; i--)
+            {
+                total = (bits[i] + bits2[i] + bits3[i]);
+                if (total > 1 && i > 0)
                 {
-                    if (i == 0) { bits3[i] = 0; }
-                    else { bits3[i - 1] = 1; }
+                    bits3[i - 1] = 1;
+                    total = total - 2;
+                    bits3[i] = total;
                 }
-                else if (bits[i] == 1 || bits2[i] == 1)
-                {
-                    bits3[i] = 1;
-                }
-                else { bits3[i] = 0; }
+                else { bits3[i] = total; total = 0; }
                 update();
             }
         }

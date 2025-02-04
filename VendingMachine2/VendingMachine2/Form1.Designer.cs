@@ -76,6 +76,7 @@
             this.TwixButton = new System.Windows.Forms.Button();
             this.SpriteButton = new System.Windows.Forms.Button();
             this.FantaButton = new System.Windows.Forms.Button();
+            this.buttonReturn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -98,7 +99,7 @@
             // 
             this.labelTotal.AutoSize = true;
             this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal.Location = new System.Drawing.Point(630, 277);
+            this.labelTotal.Location = new System.Drawing.Point(572, 278);
             this.labelTotal.Name = "labelTotal";
             this.labelTotal.Size = new System.Drawing.Size(83, 32);
             this.labelTotal.TabIndex = 0;
@@ -112,6 +113,7 @@
             this.buttonNickel.TabIndex = 1;
             this.buttonNickel.Text = "Nickel";
             this.buttonNickel.UseVisualStyleBackColor = true;
+            this.buttonNickel.Click += new System.EventHandler(this.buttonNickel_Click);
             // 
             // buttonDime
             // 
@@ -121,6 +123,7 @@
             this.buttonDime.TabIndex = 2;
             this.buttonDime.Text = "Dime";
             this.buttonDime.UseVisualStyleBackColor = true;
+            this.buttonDime.Click += new System.EventHandler(this.buttonDime_Click);
             // 
             // buttonQuarter
             // 
@@ -130,6 +133,7 @@
             this.buttonQuarter.TabIndex = 3;
             this.buttonQuarter.Text = "Quarter";
             this.buttonQuarter.UseVisualStyleBackColor = true;
+            this.buttonQuarter.Click += new System.EventHandler(this.buttonQuarter_Click);
             // 
             // buttonDollar
             // 
@@ -139,12 +143,13 @@
             this.buttonDollar.TabIndex = 4;
             this.buttonDollar.Text = "Dollar";
             this.buttonDollar.UseVisualStyleBackColor = true;
+            this.buttonDollar.Click += new System.EventHandler(this.buttonDollar_Click);
             // 
             // labelProductName
             // 
             this.labelProductName.AutoSize = true;
             this.labelProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProductName.Location = new System.Drawing.Point(626, 319);
+            this.labelProductName.Location = new System.Drawing.Point(626, 325);
             this.labelProductName.Name = "labelProductName";
             this.labelProductName.Size = new System.Drawing.Size(93, 32);
             this.labelProductName.TabIndex = 22;
@@ -154,7 +159,7 @@
             // 
             this.labelProductPrice.AutoSize = true;
             this.labelProductPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProductPrice.Location = new System.Drawing.Point(630, 363);
+            this.labelProductPrice.Location = new System.Drawing.Point(630, 374);
             this.labelProductPrice.Name = "labelProductPrice";
             this.labelProductPrice.Size = new System.Drawing.Size(84, 32);
             this.labelProductPrice.TabIndex = 23;
@@ -436,6 +441,7 @@
             this.PepsiButton.TabIndex = 37;
             this.PepsiButton.Text = "Pepsi";
             this.PepsiButton.UseVisualStyleBackColor = true;
+            this.PepsiButton.Click += new System.EventHandler(this.PepsiButton_Click);
             // 
             // LaysButton
             // 
@@ -445,6 +451,7 @@
             this.LaysButton.TabIndex = 38;
             this.LaysButton.Text = "Lays";
             this.LaysButton.UseVisualStyleBackColor = true;
+            this.LaysButton.Click += new System.EventHandler(this.LaysButton_Click);
             // 
             // DoritosButton
             // 
@@ -454,6 +461,7 @@
             this.DoritosButton.TabIndex = 39;
             this.DoritosButton.Text = "Doritos";
             this.DoritosButton.UseVisualStyleBackColor = true;
+            this.DoritosButton.Click += new System.EventHandler(this.DoritosButton_Click);
             // 
             // SnickersButton
             // 
@@ -463,6 +471,7 @@
             this.SnickersButton.TabIndex = 40;
             this.SnickersButton.Text = "Snickers";
             this.SnickersButton.UseVisualStyleBackColor = true;
+            this.SnickersButton.Click += new System.EventHandler(this.SnickersButton_Click);
             // 
             // PretzelsButton
             // 
@@ -472,6 +481,7 @@
             this.PretzelsButton.TabIndex = 41;
             this.PretzelsButton.Text = "Pretzels";
             this.PretzelsButton.UseVisualStyleBackColor = true;
+            this.PretzelsButton.Click += new System.EventHandler(this.PretzelsButton_Click);
             // 
             // PringlesButton
             // 
@@ -481,6 +491,7 @@
             this.PringlesButton.TabIndex = 42;
             this.PringlesButton.Text = "Pringles";
             this.PringlesButton.UseVisualStyleBackColor = true;
+            this.PringlesButton.Click += new System.EventHandler(this.PringlesButton_Click);
             // 
             // CheetosButton
             // 
@@ -490,6 +501,7 @@
             this.CheetosButton.TabIndex = 43;
             this.CheetosButton.Text = "Cheetos";
             this.CheetosButton.UseVisualStyleBackColor = true;
+            this.CheetosButton.Click += new System.EventHandler(this.CheetosButton_Click);
             // 
             // CheezitButton
             // 
@@ -497,8 +509,9 @@
             this.CheezitButton.Name = "CheezitButton";
             this.CheezitButton.Size = new System.Drawing.Size(75, 23);
             this.CheezitButton.TabIndex = 44;
-            this.CheezitButton.Text = "Cheezit";
+            this.CheezitButton.Text = "CheezIt";
             this.CheezitButton.UseVisualStyleBackColor = true;
+            this.CheezitButton.Click += new System.EventHandler(this.CheezitButton_Click);
             // 
             // CokeButton
             // 
@@ -508,6 +521,7 @@
             this.CokeButton.TabIndex = 45;
             this.CokeButton.Text = "Coke";
             this.CokeButton.UseVisualStyleBackColor = true;
+            this.CokeButton.Click += new System.EventHandler(this.CokeButton_Click);
             // 
             // TwixButton
             // 
@@ -517,6 +531,7 @@
             this.TwixButton.TabIndex = 46;
             this.TwixButton.Text = "Twix";
             this.TwixButton.UseVisualStyleBackColor = true;
+            this.TwixButton.Click += new System.EventHandler(this.TwixButton_Click);
             // 
             // SpriteButton
             // 
@@ -526,6 +541,7 @@
             this.SpriteButton.TabIndex = 47;
             this.SpriteButton.Text = "Sprite";
             this.SpriteButton.UseVisualStyleBackColor = true;
+            this.SpriteButton.Click += new System.EventHandler(this.SpriteButton_Click);
             // 
             // FantaButton
             // 
@@ -535,12 +551,24 @@
             this.FantaButton.TabIndex = 48;
             this.FantaButton.Text = "Fanta";
             this.FantaButton.UseVisualStyleBackColor = true;
+            this.FantaButton.Click += new System.EventHandler(this.FantaButton_Click);
+            // 
+            // buttonReturn
+            // 
+            this.buttonReturn.Location = new System.Drawing.Point(690, 284);
+            this.buttonReturn.Name = "buttonReturn";
+            this.buttonReturn.Size = new System.Drawing.Size(75, 23);
+            this.buttonReturn.TabIndex = 49;
+            this.buttonReturn.Text = "Return";
+            this.buttonReturn.UseVisualStyleBackColor = true;
+            this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 432);
+            this.Controls.Add(this.buttonReturn);
             this.Controls.Add(this.FantaButton);
             this.Controls.Add(this.SpriteButton);
             this.Controls.Add(this.TwixButton);
@@ -660,6 +688,7 @@
         private System.Windows.Forms.Button TwixButton;
         private System.Windows.Forms.Button SpriteButton;
         private System.Windows.Forms.Button FantaButton;
+        private System.Windows.Forms.Button buttonReturn;
     }
 }
 

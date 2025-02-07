@@ -120,5 +120,10 @@ namespace VendingMachine2
             coinSlot.CoinReturn();
             UpdateTotalLabel();
         }
+
+        private void buttonBuy_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

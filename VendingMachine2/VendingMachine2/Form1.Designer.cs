@@ -77,6 +77,7 @@
             this.SpriteButton = new System.Windows.Forms.Button();
             this.FantaButton = new System.Windows.Forms.Button();
             this.buttonReturn = new System.Windows.Forms.Button();
+            this.buttonBuy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -159,7 +160,7 @@
             // 
             this.labelProductPrice.AutoSize = true;
             this.labelProductPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProductPrice.Location = new System.Drawing.Point(630, 374);
+            this.labelProductPrice.Location = new System.Drawing.Point(572, 369);
             this.labelProductPrice.Name = "labelProductPrice";
             this.labelProductPrice.Size = new System.Drawing.Size(84, 32);
             this.labelProductPrice.TabIndex = 23;
@@ -563,11 +564,22 @@
             this.buttonReturn.UseVisualStyleBackColor = true;
             this.buttonReturn.Click += new System.EventHandler(this.buttonReturn_Click);
             // 
+            // buttonBuy
+            // 
+            this.buttonBuy.Location = new System.Drawing.Point(690, 375);
+            this.buttonBuy.Name = "buttonBuy";
+            this.buttonBuy.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuy.TabIndex = 50;
+            this.buttonBuy.Text = "Buy";
+            this.buttonBuy.UseVisualStyleBackColor = true;
+            this.buttonBuy.Click += new System.EventHandler(this.buttonBuy_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 432);
+            this.Controls.Add(this.buttonBuy);
             this.Controls.Add(this.buttonReturn);
             this.Controls.Add(this.FantaButton);
             this.Controls.Add(this.SpriteButton);
@@ -689,6 +701,7 @@
         private System.Windows.Forms.Button SpriteButton;
         private System.Windows.Forms.Button FantaButton;
         private System.Windows.Forms.Button buttonReturn;
+        private System.Windows.Forms.Button buttonBuy;
     }
 }
 

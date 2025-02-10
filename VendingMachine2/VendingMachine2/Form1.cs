@@ -13,17 +13,115 @@ namespace VendingMachine2
     public partial class Form1 : Form
     {
         private CoinSlot coinSlot;
+        private Products products;
 
         public Form1()
         {
             InitializeComponent();
             coinSlot = new CoinSlot();
+            products = new Products();
+            UpdateStockLabels();
         }
 
         private void showProduct(string productName, double productPrice)
         {
             labelProductName.Text = productName;
             labelProductPrice.Text = $"${productPrice:F2}";
+
+            int stock = products.GetStock(productName);
+            UpdateStockLabel(productName, stock);
+        }
+
+        private void UpdateStockLabel(string productName, int stock)
+        {
+            switch (productName)
+            {
+                case "Snickers":
+                    SnickersStock.Text = stock.ToString();
+                    break;
+                case "Pepsi":
+                    PepsiStock.Text = stock.ToString();
+                    break;
+                case "Lays":
+                    LaysStock.Text = stock.ToString();
+                    break;
+                case "Doritos":
+                    DoritosStock.Text = stock.ToString();
+                    break;
+                case "Pretzels":
+                    PretzelsStock.Text = stock.ToString();
+                    break;
+                case "Pringles":
+                    PringlesStock.Text = stock.ToString();
+                    break;
+                case "Cheetos":
+                    CheetosStock.Text = stock.ToString();
+                    break;
+                case "Cheez-It":
+                    CheezitStock.Text = stock.ToString();
+                    break;
+                case "Coca-Cola":
+                    CokeStock.Text = stock.ToString();
+                    break;
+                case "Twix":
+                    TwixStock.Text = stock.ToString();
+                    break;
+                case "Sprite":
+                    SpriteStock.Text = stock.ToString();
+                    break;
+                case "Fanta":
+                    FantaStock.Text = stock.ToString();
+                    break;
+            }
+        }
+
+        private void UpdateStockLabels()
+        {
+            string[] productNames =
+            {
+                "Snickers", "Pepsi", "Lays", "Doritos", "Pretzels",
+                "Pringles", "Cheetos", "Cheez-It", "Coca-Cola",
+                "Twix", "Sprite", "Fanta"
+            };
+
+            foreach (var product in productNames)
+            {
+                int stock = products.GetStock(product);
+                UpdateStockLabel(product, stock);
+            }
+        }
+
+        private string GetProductName(int index)
+        {
+            switch (index)
+            {
+                case 0:
+                    return "Snickers";
+                case 1:
+                    return "Pepsi";
+                case 2:
+                    return "Lays";
+                case 3:
+                    return "Doritos";
+                case 4:
+                    return "Pretzels";
+                case 5:
+                    return "Pringles";
+                case 6:
+                    return "Cheetos";
+                case 7:
+                    return "Cheez-It";
+                case 8:
+                    return "Coca-Cola";
+                case 9:
+                    return "Twix";
+                case 10:
+                    return "Sprite";
+                case 11:
+                    return "Fanta";
+                default:
+                    return "";
+            }
         }
 
         private void SnickersButton_Click(object sender, EventArgs e)
@@ -123,12 +221,21 @@ namespace VendingMachine2
 
         private void buttonBuy_Click(object sender, EventArgs e)
         {
-            //LEAVE EMPTY, accidental click
-        }
+            string productName = labelProductName.Text;
+            var productInfo = products.GetProductInfo(productName);
+            double price = productInfo.price;
+            int stock = productInfo.stock;
 
-        private void snickersStock_Click(object sender, EventArgs e)
-        {
-            //LEAVE EMPTY, accidental click
+            if (products.Buy(productName, coinSlot.Total()))
+            {
+                coinSlot.CoinReturn();
+                UpdateTotalLabel();
+                UpdateStockLabel(productName, products.GetStock(productName));
+            }
+            else
+            {
+                MessageBox.Show("Not enough money or product out of stock.");
+            }
         }
     }
 }

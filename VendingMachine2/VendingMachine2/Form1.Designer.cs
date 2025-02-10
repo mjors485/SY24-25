@@ -81,7 +81,7 @@
             this.SnickersStock = new System.Windows.Forms.Label();
             this.PepsiStock = new System.Windows.Forms.Label();
             this.LaysStock = new System.Windows.Forms.Label();
-            this.DoritiosStock = new System.Windows.Forms.Label();
+            this.DoritosStock = new System.Windows.Forms.Label();
             this.CheezitStock = new System.Windows.Forms.Label();
             this.CheetosStock = new System.Windows.Forms.Label();
             this.PringlesStock = new System.Windows.Forms.Label();
@@ -595,7 +595,6 @@
             this.SnickersStock.Size = new System.Drawing.Size(46, 32);
             this.SnickersStock.TabIndex = 51;
             this.SnickersStock.Text = "__";
-            this.SnickersStock.Click += new System.EventHandler(this.snickersStock_Click);
             // 
             // PepsiStock
             // 
@@ -617,15 +616,15 @@
             this.LaysStock.TabIndex = 53;
             this.LaysStock.Text = "__";
             // 
-            // DoritiosStock
+            // DoritosStock
             // 
-            this.DoritiosStock.AutoSize = true;
-            this.DoritiosStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DoritiosStock.Location = new System.Drawing.Point(502, 66);
-            this.DoritiosStock.Name = "DoritiosStock";
-            this.DoritiosStock.Size = new System.Drawing.Size(46, 32);
-            this.DoritiosStock.TabIndex = 54;
-            this.DoritiosStock.Text = "__";
+            this.DoritosStock.AutoSize = true;
+            this.DoritosStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DoritosStock.Location = new System.Drawing.Point(502, 66);
+            this.DoritosStock.Name = "DoritosStock";
+            this.DoritosStock.Size = new System.Drawing.Size(46, 32);
+            this.DoritosStock.TabIndex = 54;
+            this.DoritosStock.Text = "__";
             // 
             // CheezitStock
             // 
@@ -720,7 +719,7 @@
             this.Controls.Add(this.CheetosStock);
             this.Controls.Add(this.PringlesStock);
             this.Controls.Add(this.PretzelsStock);
-            this.Controls.Add(this.DoritiosStock);
+            this.Controls.Add(this.DoritosStock);
             this.Controls.Add(this.LaysStock);
             this.Controls.Add(this.PepsiStock);
             this.Controls.Add(this.SnickersStock);
@@ -850,7 +849,7 @@
         private System.Windows.Forms.Label SnickersStock;
         private System.Windows.Forms.Label PepsiStock;
         private System.Windows.Forms.Label LaysStock;
-        private System.Windows.Forms.Label DoritiosStock;
+        private System.Windows.Forms.Label DoritosStock;
         private System.Windows.Forms.Label CheezitStock;
         private System.Windows.Forms.Label CheetosStock;
         private System.Windows.Forms.Label PringlesStock;

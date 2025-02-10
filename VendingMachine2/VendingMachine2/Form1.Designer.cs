@@ -78,6 +78,18 @@
             this.FantaButton = new System.Windows.Forms.Button();
             this.buttonReturn = new System.Windows.Forms.Button();
             this.buttonBuy = new System.Windows.Forms.Button();
+            this.SnickersStock = new System.Windows.Forms.Label();
+            this.PepsiStock = new System.Windows.Forms.Label();
+            this.LaysStock = new System.Windows.Forms.Label();
+            this.DoritiosStock = new System.Windows.Forms.Label();
+            this.CheezitStock = new System.Windows.Forms.Label();
+            this.CheetosStock = new System.Windows.Forms.Label();
+            this.PringlesStock = new System.Windows.Forms.Label();
+            this.PretzelsStock = new System.Windows.Forms.Label();
+            this.FantaStock = new System.Windows.Forms.Label();
+            this.SpriteStock = new System.Windows.Forms.Label();
+            this.TwixStock = new System.Windows.Forms.Label();
+            this.CokeStock = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
@@ -574,11 +586,144 @@
             this.buttonBuy.UseVisualStyleBackColor = true;
             this.buttonBuy.Click += new System.EventHandler(this.buttonBuy_Click);
             // 
+            // SnickersStock
+            // 
+            this.SnickersStock.AutoSize = true;
+            this.SnickersStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SnickersStock.Location = new System.Drawing.Point(109, 66);
+            this.SnickersStock.Name = "SnickersStock";
+            this.SnickersStock.Size = new System.Drawing.Size(46, 32);
+            this.SnickersStock.TabIndex = 51;
+            this.SnickersStock.Text = "__";
+            this.SnickersStock.Click += new System.EventHandler(this.snickersStock_Click);
+            // 
+            // PepsiStock
+            // 
+            this.PepsiStock.AutoSize = true;
+            this.PepsiStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PepsiStock.Location = new System.Drawing.Point(237, 66);
+            this.PepsiStock.Name = "PepsiStock";
+            this.PepsiStock.Size = new System.Drawing.Size(46, 32);
+            this.PepsiStock.TabIndex = 52;
+            this.PepsiStock.Text = "__";
+            // 
+            // LaysStock
+            // 
+            this.LaysStock.AutoSize = true;
+            this.LaysStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LaysStock.Location = new System.Drawing.Point(368, 66);
+            this.LaysStock.Name = "LaysStock";
+            this.LaysStock.Size = new System.Drawing.Size(46, 32);
+            this.LaysStock.TabIndex = 53;
+            this.LaysStock.Text = "__";
+            // 
+            // DoritiosStock
+            // 
+            this.DoritiosStock.AutoSize = true;
+            this.DoritiosStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DoritiosStock.Location = new System.Drawing.Point(502, 66);
+            this.DoritiosStock.Name = "DoritiosStock";
+            this.DoritiosStock.Size = new System.Drawing.Size(46, 32);
+            this.DoritiosStock.TabIndex = 54;
+            this.DoritiosStock.Text = "__";
+            // 
+            // CheezitStock
+            // 
+            this.CheezitStock.AutoSize = true;
+            this.CheezitStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheezitStock.Location = new System.Drawing.Point(502, 204);
+            this.CheezitStock.Name = "CheezitStock";
+            this.CheezitStock.Size = new System.Drawing.Size(46, 32);
+            this.CheezitStock.TabIndex = 58;
+            this.CheezitStock.Text = "__";
+            // 
+            // CheetosStock
+            // 
+            this.CheetosStock.AutoSize = true;
+            this.CheetosStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheetosStock.Location = new System.Drawing.Point(368, 204);
+            this.CheetosStock.Name = "CheetosStock";
+            this.CheetosStock.Size = new System.Drawing.Size(46, 32);
+            this.CheetosStock.TabIndex = 57;
+            this.CheetosStock.Text = "__";
+            // 
+            // PringlesStock
+            // 
+            this.PringlesStock.AutoSize = true;
+            this.PringlesStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PringlesStock.Location = new System.Drawing.Point(237, 204);
+            this.PringlesStock.Name = "PringlesStock";
+            this.PringlesStock.Size = new System.Drawing.Size(46, 32);
+            this.PringlesStock.TabIndex = 56;
+            this.PringlesStock.Text = "__";
+            // 
+            // PretzelsStock
+            // 
+            this.PretzelsStock.AutoSize = true;
+            this.PretzelsStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PretzelsStock.Location = new System.Drawing.Point(109, 204);
+            this.PretzelsStock.Name = "PretzelsStock";
+            this.PretzelsStock.Size = new System.Drawing.Size(46, 32);
+            this.PretzelsStock.TabIndex = 55;
+            this.PretzelsStock.Text = "__";
+            // 
+            // FantaStock
+            // 
+            this.FantaStock.AutoSize = true;
+            this.FantaStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FantaStock.Location = new System.Drawing.Point(502, 347);
+            this.FantaStock.Name = "FantaStock";
+            this.FantaStock.Size = new System.Drawing.Size(46, 32);
+            this.FantaStock.TabIndex = 62;
+            this.FantaStock.Text = "__";
+            // 
+            // SpriteStock
+            // 
+            this.SpriteStock.AutoSize = true;
+            this.SpriteStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SpriteStock.Location = new System.Drawing.Point(368, 347);
+            this.SpriteStock.Name = "SpriteStock";
+            this.SpriteStock.Size = new System.Drawing.Size(46, 32);
+            this.SpriteStock.TabIndex = 61;
+            this.SpriteStock.Text = "__";
+            // 
+            // TwixStock
+            // 
+            this.TwixStock.AutoSize = true;
+            this.TwixStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TwixStock.Location = new System.Drawing.Point(237, 347);
+            this.TwixStock.Name = "TwixStock";
+            this.TwixStock.Size = new System.Drawing.Size(46, 32);
+            this.TwixStock.TabIndex = 60;
+            this.TwixStock.Text = "__";
+            // 
+            // CokeStock
+            // 
+            this.CokeStock.AutoSize = true;
+            this.CokeStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CokeStock.Location = new System.Drawing.Point(109, 347);
+            this.CokeStock.Name = "CokeStock";
+            this.CokeStock.Size = new System.Drawing.Size(46, 32);
+            this.CokeStock.TabIndex = 59;
+            this.CokeStock.Text = "__";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 432);
+            this.Controls.Add(this.FantaStock);
+            this.Controls.Add(this.SpriteStock);
+            this.Controls.Add(this.TwixStock);
+            this.Controls.Add(this.CokeStock);
+            this.Controls.Add(this.CheezitStock);
+            this.Controls.Add(this.CheetosStock);
+            this.Controls.Add(this.PringlesStock);
+            this.Controls.Add(this.PretzelsStock);
+            this.Controls.Add(this.DoritiosStock);
+            this.Controls.Add(this.LaysStock);
+            this.Controls.Add(this.PepsiStock);
+            this.Controls.Add(this.SnickersStock);
             this.Controls.Add(this.buttonBuy);
             this.Controls.Add(this.buttonReturn);
             this.Controls.Add(this.FantaButton);
@@ -702,6 +847,18 @@
         private System.Windows.Forms.Button FantaButton;
         private System.Windows.Forms.Button buttonReturn;
         private System.Windows.Forms.Button buttonBuy;
+        private System.Windows.Forms.Label SnickersStock;
+        private System.Windows.Forms.Label PepsiStock;
+        private System.Windows.Forms.Label LaysStock;
+        private System.Windows.Forms.Label DoritiosStock;
+        private System.Windows.Forms.Label CheezitStock;
+        private System.Windows.Forms.Label CheetosStock;
+        private System.Windows.Forms.Label PringlesStock;
+        private System.Windows.Forms.Label PretzelsStock;
+        private System.Windows.Forms.Label FantaStock;
+        private System.Windows.Forms.Label SpriteStock;
+        private System.Windows.Forms.Label TwixStock;
+        private System.Windows.Forms.Label CokeStock;
     }
 }
 

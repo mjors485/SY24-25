@@ -123,7 +123,12 @@ namespace VendingMachine2
 
         private void buttonBuy_Click(object sender, EventArgs e)
         {
-            
+            //LEAVE EMPTY, accidental click
+        }
+
+        private void snickersStock_Click(object sender, EventArgs e)
+        {
+            //LEAVE EMPTY, accidental click
         }
     }
 }

@@ -228,13 +228,16 @@ namespace VendingMachine2
 
             if (products.Buy(productName, coinSlot.Total()))
             {
-                coinSlot.CoinReturn();
+                coinSlot.DeductAmount(price);
+                labelMessage.Text = "Purchase successful!";
+
+
                 UpdateTotalLabel();
                 UpdateStockLabel(productName, products.GetStock(productName));
             }
             else
             {
-                MessageBox.Show("Not enough money or product out of stock.");
+                labelMessage.Text = "Not enough money or product out of stock.";
             }
         }
     }

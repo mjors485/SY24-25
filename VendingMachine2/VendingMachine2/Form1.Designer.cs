@@ -40,18 +40,18 @@
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.FantaPicture = new System.Windows.Forms.PictureBox();
+            this.SpritePicture = new System.Windows.Forms.PictureBox();
+            this.TwixPicture = new System.Windows.Forms.PictureBox();
+            this.CokePicture = new System.Windows.Forms.PictureBox();
+            this.CheezitPicture = new System.Windows.Forms.PictureBox();
+            this.CheetosPicture = new System.Windows.Forms.PictureBox();
+            this.PringlesPicture = new System.Windows.Forms.PictureBox();
+            this.PretzelsPicture = new System.Windows.Forms.PictureBox();
+            this.DoritosPicture = new System.Windows.Forms.PictureBox();
+            this.LaysPicture = new System.Windows.Forms.PictureBox();
+            this.PepsiPicture = new System.Windows.Forms.PictureBox();
+            this.SnickersPicture = new System.Windows.Forms.PictureBox();
             this.SnickersPrice = new System.Windows.Forms.Label();
             this.PepsiPrice = new System.Windows.Forms.Label();
             this.CokePrice = new System.Windows.Forms.Label();
@@ -90,22 +90,25 @@
             this.SpriteStock = new System.Windows.Forms.Label();
             this.TwixStock = new System.Windows.Forms.Label();
             this.CokeStock = new System.Windows.Forms.Label();
+            this.labelMessage = new System.Windows.Forms.Label();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FantaPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SpritePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TwixPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CokePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CheezitPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CheetosPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PringlesPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PretzelsPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DoritosPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LaysPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PepsiPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SnickersPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
             this.SuspendLayout();
             // 
             // labelTotal
@@ -218,125 +221,125 @@
             this.pictureBox13.TabIndex = 18;
             this.pictureBox13.TabStop = false;
             // 
-            // pictureBox9
+            // FantaPicture
             // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(420, 307);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(76, 72);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 17;
-            this.pictureBox9.TabStop = false;
+            this.FantaPicture.Image = ((System.Drawing.Image)(resources.GetObject("FantaPicture.Image")));
+            this.FantaPicture.Location = new System.Drawing.Point(420, 307);
+            this.FantaPicture.Name = "FantaPicture";
+            this.FantaPicture.Size = new System.Drawing.Size(76, 72);
+            this.FantaPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.FantaPicture.TabIndex = 17;
+            this.FantaPicture.TabStop = false;
             // 
-            // pictureBox10
+            // SpritePicture
             // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(289, 307);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(76, 72);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 16;
-            this.pictureBox10.TabStop = false;
+            this.SpritePicture.Image = ((System.Drawing.Image)(resources.GetObject("SpritePicture.Image")));
+            this.SpritePicture.Location = new System.Drawing.Point(289, 307);
+            this.SpritePicture.Name = "SpritePicture";
+            this.SpritePicture.Size = new System.Drawing.Size(76, 72);
+            this.SpritePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SpritePicture.TabIndex = 16;
+            this.SpritePicture.TabStop = false;
             // 
-            // pictureBox11
+            // TwixPicture
             // 
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(158, 307);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(76, 72);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 15;
-            this.pictureBox11.TabStop = false;
+            this.TwixPicture.Image = ((System.Drawing.Image)(resources.GetObject("TwixPicture.Image")));
+            this.TwixPicture.Location = new System.Drawing.Point(158, 307);
+            this.TwixPicture.Name = "TwixPicture";
+            this.TwixPicture.Size = new System.Drawing.Size(76, 72);
+            this.TwixPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.TwixPicture.TabIndex = 15;
+            this.TwixPicture.TabStop = false;
             // 
-            // pictureBox12
+            // CokePicture
             // 
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(27, 307);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(76, 72);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 14;
-            this.pictureBox12.TabStop = false;
+            this.CokePicture.Image = ((System.Drawing.Image)(resources.GetObject("CokePicture.Image")));
+            this.CokePicture.Location = new System.Drawing.Point(27, 307);
+            this.CokePicture.Name = "CokePicture";
+            this.CokePicture.Size = new System.Drawing.Size(76, 72);
+            this.CokePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CokePicture.TabIndex = 14;
+            this.CokePicture.TabStop = false;
             // 
-            // pictureBox5
+            // CheezitPicture
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(420, 164);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(76, 72);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
+            this.CheezitPicture.Image = ((System.Drawing.Image)(resources.GetObject("CheezitPicture.Image")));
+            this.CheezitPicture.Location = new System.Drawing.Point(420, 164);
+            this.CheezitPicture.Name = "CheezitPicture";
+            this.CheezitPicture.Size = new System.Drawing.Size(76, 72);
+            this.CheezitPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CheezitPicture.TabIndex = 13;
+            this.CheezitPicture.TabStop = false;
             // 
-            // pictureBox6
+            // CheetosPicture
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(289, 164);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(76, 72);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 12;
-            this.pictureBox6.TabStop = false;
+            this.CheetosPicture.Image = ((System.Drawing.Image)(resources.GetObject("CheetosPicture.Image")));
+            this.CheetosPicture.Location = new System.Drawing.Point(289, 164);
+            this.CheetosPicture.Name = "CheetosPicture";
+            this.CheetosPicture.Size = new System.Drawing.Size(76, 72);
+            this.CheetosPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.CheetosPicture.TabIndex = 12;
+            this.CheetosPicture.TabStop = false;
             // 
-            // pictureBox7
+            // PringlesPicture
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(158, 164);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(76, 72);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 11;
-            this.pictureBox7.TabStop = false;
+            this.PringlesPicture.Image = ((System.Drawing.Image)(resources.GetObject("PringlesPicture.Image")));
+            this.PringlesPicture.Location = new System.Drawing.Point(158, 164);
+            this.PringlesPicture.Name = "PringlesPicture";
+            this.PringlesPicture.Size = new System.Drawing.Size(76, 72);
+            this.PringlesPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PringlesPicture.TabIndex = 11;
+            this.PringlesPicture.TabStop = false;
             // 
-            // pictureBox8
+            // PretzelsPicture
             // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(27, 164);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(76, 72);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 10;
-            this.pictureBox8.TabStop = false;
+            this.PretzelsPicture.Image = ((System.Drawing.Image)(resources.GetObject("PretzelsPicture.Image")));
+            this.PretzelsPicture.Location = new System.Drawing.Point(27, 164);
+            this.PretzelsPicture.Name = "PretzelsPicture";
+            this.PretzelsPicture.Size = new System.Drawing.Size(76, 72);
+            this.PretzelsPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PretzelsPicture.TabIndex = 10;
+            this.PretzelsPicture.TabStop = false;
             // 
-            // pictureBox4
+            // DoritosPicture
             // 
-            this.pictureBox4.Image = global::VendingMachine2.Properties.Resources._71qwrsgAsoL;
-            this.pictureBox4.Location = new System.Drawing.Point(420, 26);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(76, 72);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
+            this.DoritosPicture.Image = global::VendingMachine2.Properties.Resources._71qwrsgAsoL;
+            this.DoritosPicture.Location = new System.Drawing.Point(420, 26);
+            this.DoritosPicture.Name = "DoritosPicture";
+            this.DoritosPicture.Size = new System.Drawing.Size(76, 72);
+            this.DoritosPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.DoritosPicture.TabIndex = 9;
+            this.DoritosPicture.TabStop = false;
             // 
-            // pictureBox3
+            // LaysPicture
             // 
-            this.pictureBox3.Image = global::VendingMachine2.Properties.Resources._51_MX5K8_fL;
-            this.pictureBox3.Location = new System.Drawing.Point(289, 26);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(76, 72);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
+            this.LaysPicture.Image = global::VendingMachine2.Properties.Resources._51_MX5K8_fL;
+            this.LaysPicture.Location = new System.Drawing.Point(289, 26);
+            this.LaysPicture.Name = "LaysPicture";
+            this.LaysPicture.Size = new System.Drawing.Size(76, 72);
+            this.LaysPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.LaysPicture.TabIndex = 8;
+            this.LaysPicture.TabStop = false;
             // 
-            // pictureBox2
+            // PepsiPicture
             // 
-            this.pictureBox2.Image = global::VendingMachine2.Properties.Resources._51btQudC3YL;
-            this.pictureBox2.Location = new System.Drawing.Point(158, 26);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(76, 72);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            this.PepsiPicture.Image = global::VendingMachine2.Properties.Resources._51btQudC3YL;
+            this.PepsiPicture.Location = new System.Drawing.Point(158, 26);
+            this.PepsiPicture.Name = "PepsiPicture";
+            this.PepsiPicture.Size = new System.Drawing.Size(76, 72);
+            this.PepsiPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PepsiPicture.TabIndex = 7;
+            this.PepsiPicture.TabStop = false;
             // 
-            // pictureBox1
+            // SnickersPicture
             // 
-            this.pictureBox1.Image = global::VendingMachine2.Properties.Resources._41NT7YN956L__AC_UF894_1000_QL80_;
-            this.pictureBox1.Location = new System.Drawing.Point(27, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(76, 72);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            this.SnickersPicture.Image = global::VendingMachine2.Properties.Resources._41NT7YN956L__AC_UF894_1000_QL80_;
+            this.SnickersPicture.Location = new System.Drawing.Point(27, 26);
+            this.SnickersPicture.Name = "SnickersPicture";
+            this.SnickersPicture.Size = new System.Drawing.Size(76, 72);
+            this.SnickersPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SnickersPicture.TabIndex = 6;
+            this.SnickersPicture.TabStop = false;
             // 
             // SnickersPrice
             // 
@@ -706,11 +709,31 @@
             this.CokeStock.TabIndex = 59;
             this.CokeStock.Text = "__";
             // 
+            // labelMessage
+            // 
+            this.labelMessage.AutoSize = true;
+            this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMessage.Location = new System.Drawing.Point(21, 474);
+            this.labelMessage.Name = "labelMessage";
+            this.labelMessage.Size = new System.Drawing.Size(250, 32);
+            this.labelMessage.TabIndex = 63;
+            this.labelMessage.Text = "Vending Machine";
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.pictureBox17.Location = new System.Drawing.Point(-13, 443);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(827, 108);
+            this.pictureBox17.TabIndex = 64;
+            this.pictureBox17.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 432);
+            this.ClientSize = new System.Drawing.Size(800, 532);
+            this.Controls.Add(this.labelMessage);
             this.Controls.Add(this.FantaStock);
             this.Controls.Add(this.SpriteStock);
             this.Controls.Add(this.TwixStock);
@@ -755,41 +778,43 @@
             this.Controls.Add(this.pictureBox15);
             this.Controls.Add(this.pictureBox14);
             this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.FantaPicture);
+            this.Controls.Add(this.SpritePicture);
+            this.Controls.Add(this.TwixPicture);
+            this.Controls.Add(this.CokePicture);
+            this.Controls.Add(this.CheezitPicture);
+            this.Controls.Add(this.CheetosPicture);
+            this.Controls.Add(this.PringlesPicture);
+            this.Controls.Add(this.PretzelsPicture);
+            this.Controls.Add(this.DoritosPicture);
+            this.Controls.Add(this.LaysPicture);
+            this.Controls.Add(this.PepsiPicture);
+            this.Controls.Add(this.SnickersPicture);
             this.Controls.Add(this.buttonDollar);
             this.Controls.Add(this.buttonQuarter);
             this.Controls.Add(this.buttonDime);
             this.Controls.Add(this.buttonNickel);
             this.Controls.Add(this.labelTotal);
+            this.Controls.Add(this.pictureBox17);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FantaPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SpritePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TwixPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CokePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CheezitPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CheetosPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PringlesPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PretzelsPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DoritosPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.LaysPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PepsiPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SnickersPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -802,18 +827,18 @@
         private System.Windows.Forms.Button buttonDime;
         private System.Windows.Forms.Button buttonQuarter;
         private System.Windows.Forms.Button buttonDollar;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox SnickersPicture;
+        private System.Windows.Forms.PictureBox PepsiPicture;
+        private System.Windows.Forms.PictureBox LaysPicture;
+        private System.Windows.Forms.PictureBox DoritosPicture;
+        private System.Windows.Forms.PictureBox CheezitPicture;
+        private System.Windows.Forms.PictureBox CheetosPicture;
+        private System.Windows.Forms.PictureBox PringlesPicture;
+        private System.Windows.Forms.PictureBox PretzelsPicture;
+        private System.Windows.Forms.PictureBox FantaPicture;
+        private System.Windows.Forms.PictureBox SpritePicture;
+        private System.Windows.Forms.PictureBox TwixPicture;
+        private System.Windows.Forms.PictureBox CokePicture;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.PictureBox pictureBox15;
@@ -858,6 +883,8 @@
         private System.Windows.Forms.Label SpriteStock;
         private System.Windows.Forms.Label TwixStock;
         private System.Windows.Forms.Label CokeStock;
+        private System.Windows.Forms.Label labelMessage;
+        private System.Windows.Forms.PictureBox pictureBox17;
     }
 }
 

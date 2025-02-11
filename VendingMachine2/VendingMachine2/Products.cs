@@ -11,18 +11,18 @@ namespace VendingMachine2
         {
             inventory = new Dictionary<string, (double price, int stock)>
             {
-                { "Snickers", (1.50, 5) },
-                { "Pepsi", (2.00, 5) },
-                { "Lays", (1.75, 5) },
-                { "Doritos", (1.75, 5) },
-                { "Pretzels", (1.75, 5) },
-                { "Pringles", (1.25, 5) },
-                { "Cheetos", (1.75, 5) },
-                { "Cheez-It", (1.25, 5) },
-                { "Coca-Cola", (2.00, 5) },
-                { "Twix", (1.50, 5) },
-                { "Sprite", (2.00, 5) },
-                { "Fanta", (2.00, 5) }
+                { "Snickers", (1.50, 10) },
+                { "Pepsi", (2.00, 10) },
+                { "Lays", (1.75, 10) },
+                { "Doritos", (1.75, 10) },
+                { "Pretzels", (1.75, 10) },
+                { "Pringles", (1.25, 10) },
+                { "Cheetos", (1.75, 10) },
+                { "Cheez-It", (1.25, 10) },
+                { "Coca-Cola", (2.00, 10) },
+                { "Twix", (1.50, 10) },
+                { "Sprite", (2.00, 10) },
+                { "Fanta", (2.00, 10) }
             };
         }
 
@@ -39,7 +39,6 @@ namespace VendingMachine2
 
                 if (stock > 0 && insertedMoney >= price)
                 {
-                    // Update stock and return success
                     inventory[product] = (price, stock - 1);
                     return true;
                 }

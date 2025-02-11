@@ -46,5 +46,10 @@ namespace VendingMachine2
         {
             totalAmount = 0.0;
         }
+
+        public void DeductAmount(double amount)
+        {
+            totalAmount -= amount;
+        }
     }
 }

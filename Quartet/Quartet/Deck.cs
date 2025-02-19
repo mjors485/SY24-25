@@ -16,7 +16,16 @@ namespace Quartet
         }
         public void Shuffle()
         {
-
+            int n = 0;
+            Random rnd = new Random();
+            CarCard temp = null;
+            for (int i = 0; i < carCards.Count; i++)
+            {
+                temp = carCards[i];
+                n = rnd.Next(carCards.Count);
+                carCards[i] = carCards[n];
+                carCards[n] = temp;
+            }
         }
         public CarCard GetCard(int index)
         {

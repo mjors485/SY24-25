@@ -20,8 +20,8 @@ namespace Quartet
         public int cc { get; set; }
         public int cylinders { get; set; }
         public int rpm { get; set; }
-
         public string id { get; set; }
+
         public CarCard(string id, string name, int maxspeed, double zerotosixty, int hp, int cc, int cylinders, int rpm)
         {
             this.id = id.ToUpper();
@@ -76,7 +76,7 @@ namespace Quartet
         }
         public override string ToString()
         {
-            return name + ":\n\tmaxspeed:" + maxspeed +
+            return id + " " + name + ":\n\tmaxspeed:" + maxspeed +
                 "\n\tzerotosixty:" + zerotosixty +
                 "\n\thp:" + hp +
                 "\n\tcc:" + cc +

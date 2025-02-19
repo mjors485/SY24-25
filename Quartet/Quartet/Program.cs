@@ -44,15 +44,45 @@ namespace Quartet
             CarCard H3 = new CarCard("H3", "Pontiac GTO", 280, 5.7, 5970, 400, 8, 5200);
             CarCard H4 = new CarCard("H4", "BMW M5", 250, 4.7, 4999, 507, 10, 7750);
 
-
-            //WriteLine(C4.Compare(A3, CarCard.category.hp));
             List<CarCard> list = new List<CarCard>();
             list.Add(C4);
-            list.Add(C3);
+            list.Add(A1);
+            list.Add(A2);
             list.Add(A3);
-            list.Add(G4);
+            list.Add(A4);
+            list.Add(B1);
+            list.Add(B2);
+            list.Add(B3);
+            list.Add(B4);
+            list.Add(C1);
+            list.Add(C2);
+            list.Add(C3);
+            list.Add(C4);
+            list.Add(D1);
+            list.Add(D2);
+            list.Add(D3);
+            list.Add(D4);
+            list.Add(E1);
+            list.Add(E2);
+            list.Add(E3);
+            list.Add(E4);
+            list.Add(F1);
+            list.Add(F2);
+            list.Add(F3);
+            list.Add(F4);
             list.Add(G1);
+            list.Add(G2);
+            list.Add(G3);
+            list.Add(G4);
+            list.Add(H1);
+            list.Add(H2);
+            list.Add(H3);
+            list.Add(H4);
+
             Deck d = new Deck(list);
+            d.Shuffle();
+            foreach (CarCard card in list)
+                WriteLine(card);
             ReadLine();
         }
     }

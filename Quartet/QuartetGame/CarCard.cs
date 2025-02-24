@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Quartet
 {
-    internal class CarCard
+    public class CarCard
     {
         public enum category
         {

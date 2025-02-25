@@ -45,7 +45,6 @@ namespace Quartet
             CarCard H4 = new CarCard("H4", "BMW M5", 250, 4.7, 4999, 507, 10, 7750);
 
             List<CarCard> list = new List<CarCard>();
-            list.Add(C4);
             list.Add(A1);
             list.Add(A2);
             list.Add(A3);

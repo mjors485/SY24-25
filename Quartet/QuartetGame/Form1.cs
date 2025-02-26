@@ -109,9 +109,66 @@ namespace QuartetGame
             labelRPM.Text = c.rpm.ToString();
         }
 
-        private void A1Button_Click(object sender, EventArgs e)
+        private void ShowCard2(CarCard c)
+        {
+            //id, name, maxspeed, zerotosixty, hp, cc, cylinders, rpm
+            pictureBoxCar2.Load(c.id + ".jpg");
+            labelID2.Text = c.id;
+            labelName2.Text = c.name;
+            labelMaxSpeed2.Text = c.maxspeed.ToString();
+            labelZeroToSixty2.Text = c.zerotosixty.ToString();
+            labelHP2.Text = c.hp.ToString();
+            labelCC2.Text = c.cc.ToString();
+            labelCylinders2.Text = c.cylinders.ToString();
+            labelRPM2.Text = c.rpm.ToString();
+        }
+
+        private void ShowCard3(CarCard c)
+        {
+            //id, name, maxspeed, zerotosixty, hp, cc, cylinders, rpm
+            pictureBoxCar3.Load(c.id + ".jpg");
+            labelID3.Text = c.id;
+            labelName3.Text = c.name;
+            labelMaxSpeed3.Text = c.maxspeed.ToString();
+            labelZeroToSixty3.Text = c.zerotosixty.ToString();
+            labelHP3.Text = c.hp.ToString();
+            labelCC3.Text = c.cc.ToString();
+            labelCylinders3.Text = c.cylinders.ToString();
+            labelRPM3.Text = c.rpm.ToString();
+        }
+
+        private void ShowCard4(CarCard c)
+        {
+            //id, name, maxspeed, zerotosixty, hp, cc, cylinders, rpm
+            pictureBoxCar4.Load(c.id + ".jpg");
+            labelID4.Text = c.id;
+            labelName4.Text = c.name;
+            labelMaxSpeed4.Text = c.maxspeed.ToString();
+            labelZeroToSixty4.Text = c.zerotosixty.ToString();
+            labelHP4.Text = c.hp.ToString();
+            labelCC4.Text = c.cc.ToString();
+            labelCylinders4.Text = c.cylinders.ToString();
+            labelRPM4.Text = c.rpm.ToString();
+        }
+
+        private void Card1Button_Click_1(object sender, EventArgs e)
         {
             ShowCard(d.GetCard(0));
+        }
+
+        private void Card2Button_Click(object sender, EventArgs e)
+        {
+            ShowCard2(d.GetCard(0));
+        }
+
+        private void Card3Button_Click(object sender, EventArgs e)
+        {
+            ShowCard3(d.GetCard(0));
+        }
+
+        private void Card4Button_Click(object sender, EventArgs e)
+        {
+            ShowCard4(d.GetCard(0));
         }
     }
 }

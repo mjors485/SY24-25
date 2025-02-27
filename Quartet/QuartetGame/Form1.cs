@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -50,6 +51,10 @@ namespace QuartetGame
         List<CarCard> list = new List<CarCard>();
 
         Deck d;
+        Hand h1 = new Hand();
+        Hand h2 = new Hand();
+        Hand h3 = new Hand();
+        Hand h4 = new Hand();
 
         public Form1()
         {
@@ -98,6 +103,23 @@ namespace QuartetGame
         private void ShowCard(CarCard c)
         {
             //id, name, maxspeed, zerotosixty, hp, cc, cylinders, rpm
+            
+            if (c == null) return;
+            {
+                //not working for some reason??
+                
+                //pictureBoxCar.Image = null;
+                //labelID.Text = "";
+                //labelName.Text = "";
+                //labelMaxSpeed.Text = "";
+                //labelZeroToSixty.Text = "";
+                //labelHP.Text = "";
+                //labelCC.Text = "";
+                //labelCylinders.Text = "";
+                //labelRPM.Text = "";
+                //return;
+            }
+
             pictureBoxCar.Load(c.id + ".jpg");
             labelID.Text = c.id;
             labelName.Text = c.name;
@@ -112,6 +134,8 @@ namespace QuartetGame
         private void ShowCard2(CarCard c)
         {
             //id, name, maxspeed, zerotosixty, hp, cc, cylinders, rpm
+            
+            if (c == null) return;
             pictureBoxCar2.Load(c.id + ".jpg");
             labelID2.Text = c.id;
             labelName2.Text = c.name;
@@ -126,6 +150,7 @@ namespace QuartetGame
         private void ShowCard3(CarCard c)
         {
             //id, name, maxspeed, zerotosixty, hp, cc, cylinders, rpm
+            if (c == null) return;
             pictureBoxCar3.Load(c.id + ".jpg");
             labelID3.Text = c.id;
             labelName3.Text = c.name;
@@ -140,6 +165,7 @@ namespace QuartetGame
         private void ShowCard4(CarCard c)
         {
             //id, name, maxspeed, zerotosixty, hp, cc, cylinders, rpm
+            if (c == null) return;
             pictureBoxCar4.Load(c.id + ".jpg");
             labelID4.Text = c.id;
             labelName4.Text = c.name;
@@ -153,22 +179,38 @@ namespace QuartetGame
 
         private void Card1Button_Click_1(object sender, EventArgs e)
         {
-            ShowCard(d.GetCard(0));
+            ShowCard(h1.topCard());
         }
 
         private void Card2Button_Click(object sender, EventArgs e)
         {
-            ShowCard2(d.GetCard(0));
+            ShowCard2(h2.topCard());
         }
 
         private void Card3Button_Click(object sender, EventArgs e)
         {
-            ShowCard3(d.GetCard(0));
+            ShowCard3(h3.topCard());
         }
 
         private void Card4Button_Click(object sender, EventArgs e)
         {
-            ShowCard4(d.GetCard(0));
+            ShowCard4(h4.topCard());
+        }
+
+        private void DealButton_Click(object sender, EventArgs e)
+        {
+            //shuffle deck
+            d.Shuffle();
+
+            //deal cards
+            while (!d.IsEmpty())
+            {
+                h1.Add(d.GetCard(0));
+                h2.Add(d.GetCard(0));
+                h3.Add(d.GetCard(0));
+                h4.Add(d.GetCard(0));
+            }
+
         }
     }
 }

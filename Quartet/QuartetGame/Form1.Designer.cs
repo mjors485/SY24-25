@@ -68,6 +68,7 @@
             this.labelMaxSpeed4 = new System.Windows.Forms.Label();
             this.labelName4 = new System.Windows.Forms.Label();
             this.pictureBoxCar4 = new System.Windows.Forms.PictureBox();
+            this.DealButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar3)).BeginInit();
@@ -438,11 +439,23 @@
             this.pictureBoxCar4.TabIndex = 30;
             this.pictureBoxCar4.TabStop = false;
             // 
+            // DealButton
+            // 
+            this.DealButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DealButton.Location = new System.Drawing.Point(546, 396);
+            this.DealButton.Name = "DealButton";
+            this.DealButton.Size = new System.Drawing.Size(75, 44);
+            this.DealButton.TabIndex = 40;
+            this.DealButton.Text = "DEAL";
+            this.DealButton.UseVisualStyleBackColor = true;
+            this.DealButton.Click += new System.EventHandler(this.DealButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1170, 416);
+            this.ClientSize = new System.Drawing.Size(1170, 463);
+            this.Controls.Add(this.DealButton);
             this.Controls.Add(this.Card4Button);
             this.Controls.Add(this.labelID4);
             this.Controls.Add(this.labelRPM4);
@@ -537,6 +550,7 @@
         private System.Windows.Forms.Label labelMaxSpeed4;
         private System.Windows.Forms.Label labelName4;
         private System.Windows.Forms.PictureBox pictureBoxCar4;
+        private System.Windows.Forms.Button DealButton;
     }
 }
 

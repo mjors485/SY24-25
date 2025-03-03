@@ -104,20 +104,18 @@ namespace QuartetGame
         {
             //id, name, maxspeed, zerotosixty, hp, cc, cylinders, rpm
             
-            if (c == null) return;
-            {
-                //not working for some reason??
-                
-                //pictureBoxCar.Image = null;
-                //labelID.Text = "";
-                //labelName.Text = "";
-                //labelMaxSpeed.Text = "";
-                //labelZeroToSixty.Text = "";
-                //labelHP.Text = "";
-                //labelCC.Text = "";
-                //labelCylinders.Text = "";
-                //labelRPM.Text = "";
-                //return;
+            if (c == null)
+            {                
+                pictureBoxCar.Image = null;
+                labelID.Text = "";
+                labelName.Text = "";
+                labelMaxSpeed.Text = "";
+                labelZeroToSixty.Text = "";
+                labelHP.Text = "";
+                labelCC.Text = "";
+                labelCylinders.Text = "";
+                labelRPM.Text = "";
+                return;
             }
 
             pictureBoxCar.Load(c.id + ".jpg");

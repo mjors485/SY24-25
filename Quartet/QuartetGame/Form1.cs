@@ -98,6 +98,8 @@ namespace QuartetGame
 
             d = new Deck(list);
             d.Shuffle();
+            Deal();
+            ShowCard(h1.topCard());
         }
 
         private void ShowCard(CarCard c)
@@ -197,6 +199,11 @@ namespace QuartetGame
 
         private void DealButton_Click(object sender, EventArgs e)
         {
+            Deal();
+        }
+
+        private void Deal()
+        {
             //shuffle deck
             d.Shuffle();
 
@@ -208,7 +215,27 @@ namespace QuartetGame
                 h3.Add(d.GetCard(0));
                 h4.Add(d.GetCard(0));
             }
+        }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowCard2(h2.topCard());
+            ShowCard3(h3.topCard());
+            ShowCard4(h4.topCard());
+        }
+
+        private Hand GetWinner(CarCard.category c)
+        {
+            //check all 4 top cards on category c
+            // return the highest value
+            if (c == CarCard.category.hp)
+            {
+                if (h1.topCard().hp > h2.topCard().hp)
+                {
+                    return h1;
+                }
+            }
+            return h1;
         }
     }
 }

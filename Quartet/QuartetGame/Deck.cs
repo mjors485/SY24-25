@@ -29,13 +29,13 @@ namespace Quartet
         }
         public CarCard GetCard(int index)
         {
-            //if (carCards.Count > 0)
-            //{
+            if (carCards.Count > 0)
+            {
                 CarCard C = carCards[index];
                 carCards.RemoveAt(index);
                 return C;
-            //}
-            //return null;
+            }
+            return null;
         }
 
         public bool IsEmpty()

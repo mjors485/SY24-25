@@ -222,20 +222,53 @@ namespace QuartetGame
             ShowCard2(h2.topCard());
             ShowCard3(h3.topCard());
             ShowCard4(h4.topCard());
+
+            if (comboBox1.SelectedItem.ToString() == "HP")
+            {
+                Hand winningHand = GetWinner(CarCard.category.hp);
+                ShowWinningCard(winningHand);
+            }
         }
 
         private Hand GetWinner(CarCard.category c)
         {
-            //check all 4 top cards on category c
-            // return the highest value
             if (c == CarCard.category.hp)
             {
-                if (h1.topCard().hp > h2.topCard().hp)
+                CarCard bestCard = h1.topCard();
+                Hand winner = h1;
+
+                if (h2.topCard() != null && h2.topCard().hp > bestCard.hp)
                 {
-                    return h1;
+                    bestCard = h2.topCard();
+                    winner = h2;
                 }
+                if (h3.topCard() != null && h3.topCard().hp > bestCard.hp)
+                {
+                    bestCard = h3.topCard();
+                    winner = h3;
+                }
+                if (h4.topCard() != null && h4.topCard().hp > bestCard.hp)
+                {
+                    bestCard = h4.topCard();
+                    winner = h4;
+                }
+
+                return winner;
             }
-            return h1;
+            return null;
+        }
+
+        private void ShowWinningCard(Hand winningHand)
+        {
+            CarCard winningCard = winningHand.topCard();
+            if (winningCard != null)
+            {
+                WinLabel.Text = $"The winning card is: {winningCard.name} with HP: {winningCard.hp}";
+            }
+            else
+            {
+                WinLabel.Text = "No winning card found.";
+            }
         }
     }
 }

@@ -97,6 +97,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.WinLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCar3)).BeginInit();
@@ -779,11 +780,22 @@
             this.label24.TabIndex = 63;
             this.label24.Text = "Max Speed";
             // 
+            // WinLabel
+            // 
+            this.WinLabel.AutoSize = true;
+            this.WinLabel.Location = new System.Drawing.Point(557, 478);
+            this.WinLabel.Name = "WinLabel";
+            this.WinLabel.Size = new System.Drawing.Size(42, 16);
+            this.WinLabel.TabIndex = 69;
+            this.WinLabel.Text = "_____";
+            this.WinLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1170, 475);
+            this.ClientSize = new System.Drawing.Size(1170, 517);
+            this.Controls.Add(this.WinLabel);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label21);
@@ -936,6 +948,7 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label WinLabel;
     }
 }
 

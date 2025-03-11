@@ -17,5 +17,11 @@ namespace Quartet
         {
             carCards.Add(carCard);
         }
+        public CarCard gettopCarCard()
+        {
+            CarCard carCard = topCard();
+            carCards.Remove(carCard);
+            return carCard;
+        }
     }
 }

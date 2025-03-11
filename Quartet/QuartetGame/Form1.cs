@@ -228,34 +228,91 @@ namespace QuartetGame
                 Hand winningHand = GetWinner(CarCard.category.hp);
                 ShowWinningCard(winningHand);
             }
+
+            else if (comboBox1.SelectedItem.ToString() == "Max Speed")
+            {
+                Hand winningHand = GetWinner(CarCard.category.maxspeed);
+                ShowWinningCard(winningHand);
+            }
+
+            else if (comboBox1.SelectedItem.ToString() == "Zero to Sixty")
+            {
+                Hand winningHand = GetWinner(CarCard.category.zerotosixty);
+                ShowWinningCard(winningHand);
+            }
+
+            else if (comboBox1.SelectedItem.ToString() == "CC")
+            {
+                Hand winningHand = GetWinner(CarCard.category.cc);
+                ShowWinningCard(winningHand);
+            }
+
+            else if (comboBox1.SelectedItem.ToString() == "Cylinders")
+            {
+                Hand winningHand = GetWinner(CarCard.category.cylinders);
+                ShowWinningCard(winningHand);
+            }
+
+            else if (comboBox1.SelectedItem.ToString() == "RPM")
+            {
+                Hand winningHand = GetWinner(CarCard.category.rpm);
+                ShowWinningCard(winningHand);
+            }
         }
 
         private Hand GetWinner(CarCard.category c)
         {
-            if (c == CarCard.category.hp)
+            CarCard bestCard = null;
+            Hand winner = null;
+
+            // check each hand for best card based on category
+            foreach (var hand in new[] { h1, h2, h3, h4 })
             {
-                CarCard bestCard = h1.topCard();
-                Hand winner = h1;
-
-                if (h2.topCard() != null && h2.topCard().hp > bestCard.hp)
+                CarCard currentCard = hand.topCard();
+                if (currentCard != null)
                 {
-                    bestCard = h2.topCard();
-                    winner = h2;
+                    if (bestCard == null || IsBetter(currentCard, bestCard, c))
+                    {
+                        bestCard = currentCard;
+                        winner = hand;
+                    }
                 }
-                if (h3.topCard() != null && h3.topCard().hp > bestCard.hp)
-                {
-                    bestCard = h3.topCard();
-                    winner = h3;
-                }
-                if (h4.topCard() != null && h4.topCard().hp > bestCard.hp)
-                {
-                    bestCard = h4.topCard();
-                    winner = h4;
-                }
-
-                return winner;
             }
-            return null;
+
+            return winner;
+        }
+
+        private bool IsBetter(CarCard currentCard, CarCard bestCard, CarCard.category category)
+        {
+            switch (category)
+            {
+                //higher hp is better
+                case CarCard.category.hp:
+                    return currentCard.hp > bestCard.hp;
+                
+                    //higher max speed is better
+                case CarCard.category.maxspeed:
+                    return currentCard.maxspeed > bestCard.maxspeed;
+                
+                    //lower zero to sixty is better
+                case CarCard.category.zerotosixty:
+                    return currentCard.zerotosixty < bestCard.zerotosixty;
+                
+                    //higher cc is better
+                case CarCard.category.cc:
+                    return currentCard.cc > bestCard.cc;
+                
+                    //higher cylinders is better
+                case CarCard.category.cylinders:
+                    return currentCard.cylinders > bestCard.cylinders;
+               
+                    //higher rpm is better
+                case CarCard.category.rpm:
+                    return currentCard.rpm > bestCard.rpm;
+                
+                default:
+                    return false;
+            }
         }
 
         private void ShowWinningCard(Hand winningHand)
@@ -263,7 +320,30 @@ namespace QuartetGame
             CarCard winningCard = winningHand.topCard();
             if (winningCard != null)
             {
-                WinLabel.Text = $"The winning card is: {winningCard.name} with HP: {winningCard.hp}";
+                string winningAttribute = "";
+                switch (comboBox1.SelectedItem.ToString())
+                {
+                    case "HP":
+                        winningAttribute = winningCard.hp.ToString();
+                        break;
+                    case "Max Speed":
+                        winningAttribute = winningCard.maxspeed.ToString();
+                        break;
+                    case "Zero to Sixty":
+                        winningAttribute = winningCard.zerotosixty.ToString();
+                        break;
+                    case "CC":
+                        winningAttribute = winningCard.cc.ToString();
+                        break;
+                    case "Cylinders":
+                        winningAttribute = winningCard.cylinders.ToString();
+                        break;
+                    case "RPM":
+                        winningAttribute = winningCard.rpm.ToString();
+                        break;
+                }
+
+                WinLabel.Text = $"The winning card is: {winningCard.name} with {comboBox1.SelectedItem}: {winningAttribute}";
             }
             else
             {

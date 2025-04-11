@@ -1,6 +1,6 @@
 ﻿namespace AthleteManagement
 {
-    partial class AddEditAthlete
+    partial class AddEditAthleteForm
     {
         /// <summary>
         /// Required designer variable.

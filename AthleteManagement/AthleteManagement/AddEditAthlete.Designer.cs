@@ -44,6 +44,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btn_FormSwitch2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtBibNumber
@@ -178,11 +179,22 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Contact Info";
             // 
-            // AddEditAthlete
+            // btn_FormSwitch2
+            // 
+            this.btn_FormSwitch2.Location = new System.Drawing.Point(683, 389);
+            this.btn_FormSwitch2.Name = "btn_FormSwitch2";
+            this.btn_FormSwitch2.Size = new System.Drawing.Size(105, 49);
+            this.btn_FormSwitch2.TabIndex = 17;
+            this.btn_FormSwitch2.Text = "Database";
+            this.btn_FormSwitch2.UseVisualStyleBackColor = true;
+            this.btn_FormSwitch2.Click += new System.EventHandler(this.btn_FormSwitch2_Click);
+            // 
+            // AddEditAthleteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_FormSwitch2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -199,7 +211,7 @@
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.txtBibNumber);
-            this.Name = "AddEditAthlete";
+            this.Name = "AddEditAthleteForm";
             this.Text = "AddEditAthlete";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,5 +236,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btn_FormSwitch2;
     }
 }

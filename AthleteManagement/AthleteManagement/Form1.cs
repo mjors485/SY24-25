@@ -103,6 +103,12 @@ namespace AthleteManagement
             dgvAthletes.DataSource = filteredAthletes;
         }
 
+        private void btn_FormSwitch1_Click(object sender, EventArgs e)
+        {
+            AddEditAthleteForm f2 = new AddEditAthleteForm(null);
+            f2.Show();
+        }
+
         // (Optional) Implement filtering by Team and Gender using ComboBoxes (cmbTeamFilter, cmbGenderFilter).
         // private void cmbTeamFilter_SelectedIndexChanged(object sender, EventArgs e) { ... }
         // private void cmbGenderFilter_SelectedIndexChanged(object sender, EventArgs e) { ... }

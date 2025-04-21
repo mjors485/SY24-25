@@ -38,6 +38,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_FormSwitch1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAthletes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,11 +129,22 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Gender";
             // 
+            // btn_FormSwitch1
+            // 
+            this.btn_FormSwitch1.Location = new System.Drawing.Point(673, 389);
+            this.btn_FormSwitch1.Name = "btn_FormSwitch1";
+            this.btn_FormSwitch1.Size = new System.Drawing.Size(105, 49);
+            this.btn_FormSwitch1.TabIndex = 10;
+            this.btn_FormSwitch1.Text = "Add Athlete";
+            this.btn_FormSwitch1.UseVisualStyleBackColor = true;
+            this.btn_FormSwitch1.Click += new System.EventHandler(this.btn_FormSwitch1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btn_FormSwitch1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox2);
@@ -163,6 +175,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_FormSwitch1;
     }
 }
 

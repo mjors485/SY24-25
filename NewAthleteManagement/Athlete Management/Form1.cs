@@ -118,5 +118,11 @@ namespace Athlete_Management
             // Display the filtered athletes in the DataGridView.
             dgvAthletes.DataSource = filteredAthletes;
         }
+
+        private void btnStopwatch_Click(object sender, EventArgs e)
+        {
+            StopwatchForm stopwatchForm = new StopwatchForm();
+            stopwatchForm.Show();
+        }
     }
 }

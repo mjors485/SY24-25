@@ -32,6 +32,11 @@
             this.buttonStart = new System.Windows.Forms.Button();
             this.buttonStop = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
+            this.btnExportCsv = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.exportCsvToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialogCsv = new System.Windows.Forms.SaveFileDialog();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelTime
@@ -74,18 +79,55 @@
             this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
+            // btnExportCsv
+            // 
+            this.btnExportCsv.Location = new System.Drawing.Point(303, 321);
+            this.btnExportCsv.Name = "btnExportCsv";
+            this.btnExportCsv.Size = new System.Drawing.Size(178, 51);
+            this.btnExportCsv.TabIndex = 4;
+            this.btnExportCsv.Text = "Export to CSV";
+            this.btnExportCsv.UseVisualStyleBackColor = true;
+            this.btnExportCsv.Click += new System.EventHandler(this.btnExportCsv_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exportCsvToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 30);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // exportCsvToolStripMenuItem
+            // 
+            this.exportCsvToolStripMenuItem.Name = "exportCsvToolStripMenuItem";
+            this.exportCsvToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
+            this.exportCsvToolStripMenuItem.Text = "Export to CSV";
+            // 
+            // saveFileDialogCsv
+            // 
+            this.saveFileDialogCsv.DefaultExt = "csv";
+            this.saveFileDialogCsv.Filter = "CSV files|*.csv|All files|*.*";
+            // 
             // StopwatchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExportCsv);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.buttonStop);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.labelTime);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "StopwatchForm";
             this.Text = "StopwatchForm";
             this.Load += new System.EventHandler(this.StopwatchForm_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -97,5 +139,9 @@
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Button buttonStop;
         private System.Windows.Forms.Button buttonReset;
+        private System.Windows.Forms.Button btnExportCsv;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem exportCsvToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogCsv;
     }
 }

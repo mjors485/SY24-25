@@ -124,5 +124,6 @@ namespace Athlete_Management
             StopwatchForm stopwatchForm = new StopwatchForm();
             stopwatchForm.Show();
         }
+
     }
 }

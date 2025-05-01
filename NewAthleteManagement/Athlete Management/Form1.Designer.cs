@@ -51,7 +51,7 @@
             // 
             this.btnAdd.Location = new System.Drawing.Point(12, 274);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(75, 35);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -61,7 +61,7 @@
             // 
             this.btnEdit.Location = new System.Drawing.Point(93, 274);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.Size = new System.Drawing.Size(75, 35);
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@
             // 
             this.btnDelete.Location = new System.Drawing.Point(174, 274);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(75, 35);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -88,9 +88,9 @@
             // 
             // btnStopwatch
             // 
-            this.btnStopwatch.Location = new System.Drawing.Point(12, 303);
+            this.btnStopwatch.Location = new System.Drawing.Point(255, 274);
             this.btnStopwatch.Name = "btnStopwatch";
-            this.btnStopwatch.Size = new System.Drawing.Size(237, 33);
+            this.btnStopwatch.Size = new System.Drawing.Size(237, 35);
             this.btnStopwatch.TabIndex = 5;
             this.btnStopwatch.Text = "Stopwatch";
             this.btnStopwatch.UseVisualStyleBackColor = true;

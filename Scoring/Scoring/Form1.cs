@@ -70,12 +70,79 @@ namespace Scoring
                 if (item.ToString() == textBox5.Text)
                     t5[f5++] = score;
             }
+
+            int temp = 0;
             for (int i = 0; i < 5; i++)
             {
-                int temp = 0;
                 temp += t1[i];
                 Score1TB.Text = temp.ToString();
             }
+            
+            temp = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                temp += t2[i];
+                Score2TB.Text = temp.ToString();
+            }
+
+            temp = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                temp += t3[i];
+                Score3TB.Text = temp.ToString();
+            }
+
+            temp = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                temp += t4[i];
+                Score4TB.Text = temp.ToString();
+            }
+
+            temp = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                temp += t5[i];
+                Score5TB.Text = temp.ToString();
+            }
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+            // *** Create an array of size 10
+            int[] numbers = new int[10];
+            //10 value is the amount of numbers in the array, not necessarily the ending number
+            //since we start at 1, the final number is 10, but if i changed the starting number to 5, the final number would be 14
+
+            // Fill the array with numbers 1-10
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = i + 1;  // Adding 1 because i starts at 0
+                // i + __ is the starting number
+            }
+
+            // Display the array elements
+            // (kinda not needed, but shows all of the number)
+            listOutput.Items.Add("Array elements:");
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                listOutput.Items.Add($"numbers[{i}] = {numbers[i]}");
+            }
+
+            // Calculate the sum
+            int sum = 0;
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                sum += numbers[i];
+            }
+
+            // Calculate the average
+            double average = (double)sum / numbers.Length;
+
+            // Display the results
+            listOutput.Items.Add("");
+            listOutput.Items.Add($"Sum: {sum}");
+            listOutput.Items.Add($"Average: {average}");
         }
     }
 }

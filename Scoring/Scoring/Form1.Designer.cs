@@ -49,6 +49,8 @@
             this.Score3TB = new System.Windows.Forms.TextBox();
             this.Score4TB = new System.Windows.Forms.TextBox();
             this.Score5TB = new System.Windows.Forms.TextBox();
+            this.btnCalculate = new System.Windows.Forms.Button();
+            this.listOutput = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -240,11 +242,32 @@
             this.Score5TB.TabIndex = 20;
             this.Score5TB.Text = "000";
             // 
+            // btnCalculate
+            // 
+            this.btnCalculate.Location = new System.Drawing.Point(486, 339);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Size = new System.Drawing.Size(120, 23);
+            this.btnCalculate.TabIndex = 21;
+            this.btnCalculate.Text = "Calculate";
+            this.btnCalculate.UseVisualStyleBackColor = true;
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
+            // 
+            // listOutput
+            // 
+            this.listOutput.FormattingEnabled = true;
+            this.listOutput.ItemHeight = 16;
+            this.listOutput.Location = new System.Drawing.Point(442, 121);
+            this.listOutput.Name = "listOutput";
+            this.listOutput.Size = new System.Drawing.Size(204, 212);
+            this.listOutput.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listOutput);
+            this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.Score5TB);
             this.Controls.Add(this.Score4TB);
             this.Controls.Add(this.Score3TB);
@@ -296,6 +319,8 @@
         private System.Windows.Forms.TextBox Score3TB;
         private System.Windows.Forms.TextBox Score4TB;
         private System.Windows.Forms.TextBox Score5TB;
+        private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.ListBox listOutput;
     }
 }
 
